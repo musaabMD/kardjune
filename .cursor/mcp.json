@@ -1,0 +1,33 @@
+{
+  "mcpServers": {
+    "clerk": {
+      "type": "http",
+      "url": "https://mcp.clerk.com/mcp",
+      "note": "Clerk MCP — OAuth on first connect. SDK snippets and integration docs."
+    },
+    "cloudflare-api": {
+      "type": "http",
+      "url": "https://mcp.cloudflare.com/mcp",
+      "note": "Cloudflare API MCP — OAuth on first connect."
+    },
+    "cloudflare-docs": {
+      "type": "http",
+      "url": "https://docs.mcp.cloudflare.com/mcp"
+    },
+    "cloudflare-bindings": {
+      "type": "http",
+      "url": "https://bindings.mcp.cloudflare.com/mcp",
+      "note": "Workers bindings MCP — OAuth on first connect."
+    },
+    "cloudflare-builds": {
+      "type": "http",
+      "url": "https://builds.mcp.cloudflare.com/mcp",
+      "note": "Workers Builds MCP — OAuth on first connect."
+    },
+    "cloudflare-observability": {
+      "type": "http",
+      "url": "https://observability.mcp.cloudflare.com/mcp",
+      "note": "Observability MCP — OAuth on first connect."
+    }
+  }
+}

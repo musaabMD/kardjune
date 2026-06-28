@@ -1,0 +1,37 @@
+---
+description: Use Clerk and Cloudflare MCP servers for live project context
+alwaysApply: true
+---
+
+# MCP Servers
+
+This project has MCP servers configured in `.cursor/mcp.json`. Prefer them over guessing when working on auth, backend, storage, or Cloudflare deployment.
+
+## Clerk MCP (`clerk`)
+
+- **Auth**: OAuth via `https://mcp.clerk.com/mcp`
+- **Use for**: current Clerk SDK patterns, auth snippets, middleware examples
+- **Before auth/middleware changes**: call `list_clerk_sdk_snippets` when available.
+
+## Cloudflare MCP
+
+| Server | Use for |
+| --- | --- |
+| `cloudflare-docs` | Workers, R2, D1, KV, OpenNext docs |
+| `cloudflare-bindings` | Live R2 buckets, Workers, KV, D1 bindings |
+| `cloudflare-builds` | Worker build history |
+| `cloudflare-observability` | Worker logs and metrics |
+| `cloudflare-api` | Full Cloudflare API; prefer read scopes |
+
+DrKard resources to verify before changes:
+
+- Worker: `drkard` on `drkard.com` / `www.drkard.com`
+- R2: `drkard-qbanks`, `drkard-uploads`, `drkard-opennext-cache`
+- D1: `drkard-core`
+- KV: `drkard-limits`
+
+## Rules
+
+1. Query MCP first for live Cloudflare state when changing bindings or deployment config.
+2. For Clerk auth code, fetch SDK snippets instead of relying on memory.
+3. For Cloudflare/OpenNext, search `cloudflare-docs` before changing `wrangler.jsonc` or `open-next.config.ts`.

@@ -1,0 +1,57 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "drkard",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-06-27",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "routes": [
+    {
+      "pattern": "drkard.com",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.drkard.com",
+      "custom_domain": true
+    }
+  ],
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "drkard"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "NEXT_INC_CACHE_R2_BUCKET",
+      "bucket_name": "drkard-opennext-cache"
+    },
+    {
+      "binding": "DRKARD_QBANKS",
+      "bucket_name": "drkard-qbanks"
+    },
+    {
+      "binding": "DRKARD_UPLOADS",
+      "bucket_name": "drkard-uploads"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DRKARD_DB",
+      "database_name": "drkard-core",
+      "database_id": "REPLACE_WITH_D1_DATABASE_ID"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "DRKARD_LIMITS",
+      "id": "REPLACE_WITH_KV_NAMESPACE_ID"
+    }
+  ],
+  "images": {
+    "binding": "IMAGES"
+  }
+}
