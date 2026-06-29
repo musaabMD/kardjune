@@ -93,3 +93,8 @@ X-Admin-Secret: <DRKARD_ADMIN_SECRET>
 ```
 
 See [docs/cloudflare-architecture.md](docs/cloudflare-architecture.md) for the storage map.
+
+## Private HQ
+
+`hq.drkard.com` opens the private `/hq` dashboard. It is noindexed and Clerk-gated to `mousab.r@gmail.com` only. The dashboard reads D1/R2/KV status, users, subscriptions, sessions, uploads, feedback, AI usage, and DrKard-specific analytics goals.
+# kardjune
