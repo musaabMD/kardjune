@@ -10,8 +10,6 @@ import {
   run,
 } from "@/lib/cloudflare-store";
 
-export const runtime = "edge";
-
 type Answer = { questionId: string; selected: number; correct: boolean };
 
 export async function POST(req: NextRequest) {

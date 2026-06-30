@@ -2,8 +2,6 @@ import { NextRequest } from "next/server";
 import { auth } from "@clerk/nextjs/server";
 import { examBySlug, json, readQuestions, recordEvent } from "@/lib/cloudflare-store";
 
-export const runtime = "edge";
-
 export async function GET(_req: NextRequest, { params }: { params: Promise<{ examSlug: string }> }) {
   const { examSlug } = await params;
   const exam = await examBySlug(examSlug);

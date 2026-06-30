@@ -46,13 +46,13 @@
     {
       "binding": "DRKARD_DB",
       "database_name": "drkard-core",
-      "database_id": "REPLACE_WITH_D1_DATABASE_ID"
+      "database_id": "0ca12f92-e48f-43bf-accf-64f6a6a8e374"
     }
   ],
   "kv_namespaces": [
     {
       "binding": "DRKARD_LIMITS",
-      "id": "REPLACE_WITH_KV_NAMESPACE_ID"
+      "id": "1e24941a804841cdaeba0bfbe614d149"
     }
   ],
   "images": {

@@ -2,8 +2,6 @@ import { currentUser } from "@clerk/nextjs/server";
 import { NextRequest, NextResponse } from "next/server";
 import { cloudflareEnv, createId, run } from "@/lib/cloudflare-store";
 
-export const runtime = "edge";
-
 const HQ_OWNER_EMAIL = "mousab.r@gmail.com";
 
 type QuestionPayload = {

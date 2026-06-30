@@ -2,8 +2,6 @@ import { auth } from "@clerk/nextjs/server";
 import { NextRequest } from "next/server";
 import { cloudflareEnv, createId, json, recordEvent, run } from "@/lib/cloudflare-store";
 
-export const runtime = "edge";
-
 export async function POST(req: NextRequest) {
   const session = await auth();
   const body = (await req.json().catch(() => null)) as {

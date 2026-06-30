@@ -5,7 +5,6 @@ import { notFound, redirect } from "next/navigation";
 import HqDashboard, { type HqColumn, type HqMetric, type IconKey, type Row, type Stat, type Status } from "./HqDashboard";
 import { all, cloudflareEnv, first } from "@/lib/cloudflare-store";
 
-export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
 const HQ_OWNER_EMAIL = "mousab.r@gmail.com";

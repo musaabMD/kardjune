@@ -2,8 +2,6 @@ import { auth } from "@clerk/nextjs/server";
 import { NextRequest } from "next/server";
 import { cloudflareEnv, json, run } from "@/lib/cloudflare-store";
 
-export const runtime = "edge";
-
 export async function PATCH(req: NextRequest) {
   const session = await auth();
   if (!session.isAuthenticated || !session.userId) {

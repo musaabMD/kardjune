@@ -10,8 +10,6 @@ import {
   run,
 } from "@/lib/cloudflare-store";
 
-export const runtime = "edge";
-
 type UploadBucket = {
   put: (
     key: string,

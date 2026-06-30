@@ -3,8 +3,6 @@ import { NextRequest } from "next/server";
 import { ACTIVE_GOAL_NAMES } from "@/lib/hq-goals";
 import { cloudflareEnv, createId, json, run } from "@/lib/cloudflare-store";
 
-export const runtime = "edge";
-
 export async function POST(req: NextRequest) {
   const body = (await req.json().catch(() => null)) as {
     name?: unknown;

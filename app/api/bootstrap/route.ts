@@ -1,8 +1,6 @@
 import { auth } from "@clerk/nextjs/server";
 import { getEntitlements, json, listExams } from "@/lib/cloudflare-store";
 
-export const runtime = "edge";
-
 export async function GET() {
   const session = await auth();
   const [exams, entitlements] = await Promise.all([

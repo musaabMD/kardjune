@@ -3,8 +3,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { estimateOpenRouterCostUsd, monthStartUtcMs } from "@/lib/ai-pricing";
 import { cloudflareEnv, createId, getEntitlements, recordEvent, run } from "@/lib/cloudflare-store";
 
-export const runtime = "edge";
-
 type ChatMessage = {
   role: "user" | "assistant";
   content: string;

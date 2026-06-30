@@ -16,6 +16,39 @@ export type BankQuestion = {
   tags: string[];
 };
 
+const REQUESTED_EXAMS: ExamRecord[] = [
+  { id: "nclex-rn", slug: "nclex-rn", title: "NCLEX-RN", role: "Registered nurse" },
+  { id: "nclex-pn", slug: "nclex-pn", title: "NCLEX-PN", role: "Practical nurse" },
+  { id: "ati-teas", slug: "ati-teas", title: "ATI TEAS", role: "Nursing entrance" },
+  { id: "hesi-a2", slug: "hesi-a2", title: "HESI A2", role: "Health entrance" },
+  { id: "comptia-security-plus", slug: "comptia-security-plus", title: "CompTIA Security+", role: "Cybersecurity" },
+  { id: "comptia-a-plus", slug: "comptia-a-plus", title: "CompTIA A+", role: "IT support" },
+  { id: "comptia-network-plus", slug: "comptia-network-plus", title: "CompTIA Network+", role: "Networking" },
+  { id: "aws-cloud-practitioner", slug: "aws-cloud-practitioner", title: "AWS Cloud Practitioner", role: "Cloud fundamentals" },
+  { id: "cisco-ccna", slug: "cisco-ccna", title: "Cisco CCNA", role: "Network associate" },
+  { id: "cissp", slug: "cissp", title: "CISSP", role: "Security leadership" },
+  { id: "cisa", slug: "cisa", title: "CISA", role: "IT audit" },
+  { id: "pmp", slug: "pmp", title: "PMP", role: "Project manager" },
+  { id: "capm", slug: "capm", title: "CAPM", role: "Associate project manager" },
+  { id: "shrm-cp", slug: "shrm-cp", title: "SHRM-CP", role: "HR professional" },
+  { id: "phr", slug: "phr", title: "PHR", role: "HR professional" },
+  { id: "cpc", slug: "cpc", title: "CPC", role: "Medical coder" },
+  { id: "ptce", slug: "ptce", title: "PTCE", role: "Pharmacy technician" },
+  { id: "nha-ccma", slug: "nha-ccma", title: "NHA CCMA", role: "Clinical medical assistant" },
+  { id: "nremt-emt", slug: "nremt-emt", title: "NREMT EMT", role: "Emergency medical technician" },
+  { id: "nremt-paramedic", slug: "nremt-paramedic", title: "NREMT Paramedic", role: "Paramedic" },
+  { id: "fnp", slug: "fnp", title: "FNP", role: "Family nurse practitioner" },
+  { id: "cen", slug: "cen", title: "CEN", role: "Emergency nurse" },
+  { id: "ccrn", slug: "ccrn", title: "CCRN", role: "Critical care nurse" },
+  { id: "nasm-cpt", slug: "nasm-cpt", title: "NASM CPT", role: "Personal trainer" },
+  { id: "nsca-cscs", slug: "nsca-cscs", title: "NSCA CSCS", role: "Strength and conditioning" },
+  { id: "vtne", slug: "vtne", title: "VTNE", role: "Veterinary technician" },
+  { id: "npte-pt", slug: "npte-pt", title: "NPTE PT", role: "Physical therapist" },
+  { id: "nbcot-otr", slug: "nbcot-otr", title: "NBCOT OTR", role: "Occupational therapist" },
+  { id: "leed-green-associate", slug: "leed-green-associate", title: "LEED Green Associate", role: "Sustainability" },
+  { id: "apics-cpim", slug: "apics-cpim", title: "APICS CPIM", role: "Supply chain" },
+];
+
 export const SAMPLE_EXAMS: ExamRecord[] = [
   { id: "family-medicine", slug: "family-medicine", title: "Family Medicine", role: "FM" },
   { id: "sdle", slug: "sdle", title: "SDLE", role: "Dentist" },
@@ -23,6 +56,7 @@ export const SAMPLE_EXAMS: ExamRecord[] = [
   { id: "smle", slug: "smle", title: "SMLE", role: "Physician" },
   { id: "snle", slug: "snle", title: "SNLE", role: "Nursing" },
   { id: "sple", slug: "sple", title: "SPLE", role: "Pharmacist" },
+  ...REQUESTED_EXAMS,
 ];
 
 const SAMPLE_QUESTION_TEMPLATES = [

@@ -16,13 +16,22 @@ export const metadata: Metadata = {
     "Real exam questions for every medical specialty. Practice, flashcards, mock exams, and an AI study assistant.",
 };
 
+const clerkProviderProps = {
+  dynamic: true,
+  __internal_clerkJSUrl: "https://cdn.jsdelivr.net/npm/@clerk/clerk-js@6/dist/clerk.browser.js",
+  __internal_clerkUIUrl: "https://cdn.jsdelivr.net/npm/@clerk/ui@1/dist/ui.browser.js",
+} as React.ComponentProps<typeof ClerkProvider> & {
+  __internal_clerkJSUrl: string;
+  __internal_clerkUIUrl: string;
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${nunito.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-[family-name:var(--font-nunito)]">
-        <ClerkProvider dynamic>
+        <ClerkProvider {...clerkProviderProps}>
           <Providers>{children}</Providers>
         </ClerkProvider>
       </body>
