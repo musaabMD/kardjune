@@ -37,6 +37,7 @@ import {
   pathFromState,
   stateFromPath,
 } from "@/lib/app-routes";
+import { trackGoal } from "@/lib/track";
 
 type Id<T extends string> = string;
 type CloudQuestion = {
@@ -1910,8 +1911,8 @@ function ExamDetail({
         );
       })()}
 
-      {cfg && <PracticeConfig target={cfg} onClose={() => { setCfg(null); onPracticeSlugChange?.(null); }} onStart={({ time, count }) => { setCfg(null); onPracticeSlugChange?.(null); setRunner({ title: `${cfg.n} practice`, questions: pickLocal(count, cfg.n), dur: time * 60 }); }} />}
-      {intro && <ExamIntro mode={intro} onClose={() => { setIntro(null); onQuizRouteChange?.(null, false); }} onStart={(count) => { const m = intro; setIntro(null); setRunner({ title: m.t, questions: pickLocal(count), dur: m.dur, quizSlug: slugify(m.t) }); }} />}
+      {cfg && <PracticeConfig target={cfg} onClose={() => { setCfg(null); onPracticeSlugChange?.(null); }} onStart={({ time, count }) => { trackGoal("practice_started", { examId, subject: cfg.n, count, time }); setCfg(null); onPracticeSlugChange?.(null); setRunner({ title: `${cfg.n} practice`, questions: pickLocal(count, cfg.n), dur: time * 60 }); }} />}
+      {intro && <ExamIntro mode={intro} onClose={() => { setIntro(null); onQuizRouteChange?.(null, false); }} onStart={(count) => { const m = intro; trackGoal("practice_started", { examId, mode: m.t, count }); setIntro(null); setRunner({ title: m.t, questions: pickLocal(count), dur: m.dur, quizSlug: slugify(m.t) }); }} />}
       {runner && <Runner title={runner.title} questions={runner.questions} durationSec={runner.dur} onClose={() => { setRunner(null); onQuizRouteChange?.(null, false); }} onDashboard={() => { setRunner(null); onQuizRouteChange?.(null, false); onDashboard?.(); }} onComplete={saveFinishedSession}
         onDone={() => { if (runner.quizSlug) onQuizRouteChange?.(runner.quizSlug, true); }}
         onReport={async ({ questionId, issueType, note, selectedAnswer }) => {
@@ -1987,6 +1988,12 @@ export function DrKardApp({ initialPath = "/" }: { initialPath?: string }) {
   const [items, setItems] = useState<Item[]>([]); const [drag, setDrag] = useState(false);
   const [paste, setPaste] = useState(""); const [allOpen, setAllOpen] = useState(false); const idRef = useRef(1);
   const [librarySlugs, setLibrarySlugs] = useState<string[]>([]);
+  useEffect(() => {
+    trackGoal("app_opened");
+  }, []);
+  useEffect(() => {
+    if (pricing) trackGoal("pricing_opened");
+  }, [pricing]);
   const refreshBootstrap = React.useCallback(async () => {
     const res = await fetch("/api/bootstrap");
     const data = (await res.json().catch(() => ({}))) as { exams?: ExamItem[]; entitlements?: Entitlements };
@@ -2121,7 +2128,7 @@ export function DrKardApp({ initialPath = "/" }: { initialPath?: string }) {
   const done = items.filter((i) => i.progress >= 100).length;
   const TAB_META = { browse: { label: "Library", icon: LayoutGrid, color: C.teal, wash: C.tealWash, shadow: C.tealDark }, upload: { label: "Upload", icon: UploadCloud, color: C.ink, wash: C.inkWash, shadow: C.inkDark } } as const;
   const goHome = () => { setPage("home"); setTab("browse"); setExam(null); setExamTab(DEFAULT_EXAM_TAB); setFlashSlug(null); setQuizSlug(null); setQuizResult(false); setAiThreadId(null); setPracticeSlug(null); setFlashTest(false); setNoteSlug(null); };
-  const openExam = (e: ExamItem) => { setExam(e); setPage("exam"); setFlashSlug(null); setQuizSlug(null); setQuizResult(false); setAiThreadId(null); setPracticeSlug(null); setFlashTest(false); setNoteSlug(null); };
+  const openExam = (e: ExamItem) => { trackGoal("exam_opened", { examId: e._id ?? e.slug ?? slugify(e.title), title: e.title }); setExam(e); setPage("exam"); setFlashSlug(null); setQuizSlug(null); setQuizResult(false); setAiThreadId(null); setPracticeSlug(null); setFlashTest(false); setNoteSlug(null); };
   const billingProps = {
     isPro: entitlements?.isPro,
     questionsRemaining: entitlements?.questionsRemaining ?? null,
@@ -2144,7 +2151,7 @@ export function DrKardApp({ initialPath = "/" }: { initialPath?: string }) {
                 <HeaderActions isSignedIn={!!isSignedIn} onUpgrade={() => setPricing(true)} {...billingProps} />
                 {isSignedIn ? <UserButton /> : (
                   <SignUpButton mode="modal">
-                    <button type="button" className="rounded-2xl bg-white px-4 py-2.5 text-sm font-black uppercase tracking-wide active:translate-y-0.5" style={{ color: C.eel, boxShadow: "0 3px 0 rgba(0,0,0,.18)" }}>Get started</button>
+                    <button type="button" onClick={() => trackGoal("signup_started")} className="rounded-2xl bg-white px-4 py-2.5 text-sm font-black uppercase tracking-wide active:translate-y-0.5" style={{ color: C.eel, boxShadow: "0 3px 0 rgba(0,0,0,.18)" }}>Get started</button>
                   </SignUpButton>
                 )}
               </div>
@@ -2214,7 +2221,7 @@ export function DrKardApp({ initialPath = "/" }: { initialPath?: string }) {
                 <HeaderActions isSignedIn={!!isSignedIn} onUpgrade={() => setPricing(true)} {...billingProps} />
                 {isSignedIn ? <><button type="button" onClick={() => setPage("dashboard")} aria-label="Dashboard" title="Dashboard" className="grid h-10 w-10 place-items-center rounded-2xl bg-white active:translate-y-0.5" style={{ color: C.eel, boxShadow: "0 3px 0 rgba(0,0,0,.18)" }}><LayoutGrid size={18} strokeWidth={3} /></button><UserButton /></> : (
                   <SignUpButton mode="modal">
-                    <button type="button" className="rounded-2xl px-4 py-2.5 text-sm font-black uppercase tracking-wide active:translate-y-0.5" style={{ background: C.teal, color: C.white, boxShadow: `0 3px 0 ${C.tealDark}` }}>Get started</button>
+                    <button type="button" onClick={() => trackGoal("signup_started")} className="rounded-2xl px-4 py-2.5 text-sm font-black uppercase tracking-wide active:translate-y-0.5" style={{ background: C.teal, color: C.white, boxShadow: `0 3px 0 ${C.tealDark}` }}>Get started</button>
                   </SignUpButton>
                 )}
               </div>

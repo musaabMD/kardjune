@@ -1,6 +1,6 @@
 import { auth } from "@clerk/nextjs/server";
 import { NextRequest } from "next/server";
-import { cloudflareEnv, createId, json, run } from "@/lib/cloudflare-store";
+import { cloudflareEnv, createId, json, recordEvent, run } from "@/lib/cloudflare-store";
 
 export const runtime = "edge";
 
@@ -32,5 +32,11 @@ export async function POST(req: NextRequest) {
     typeof body?.selectedAnswer === "number" ? body.selectedAnswer : null,
     Date.now(),
   );
+  await recordEvent({
+    name: "question_reported",
+    clerkUserId: session.userId,
+    path: "/api/feedback",
+    metadata: { examId, questionId, issueType },
+  });
   return json({ ok: true });
 }

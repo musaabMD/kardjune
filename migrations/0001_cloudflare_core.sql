@@ -137,3 +137,18 @@ create table if not exists ai_usage_events (
 );
 
 create index if not exists ai_usage_by_clerk_period on ai_usage_events (clerk_user_id, billing_period_start);
+
+create table if not exists analytics_events (
+  id text primary key,
+  name text not null,
+  clerk_user_id text,
+  path text,
+  metadata text,
+  user_agent text,
+  referrer text,
+  country text,
+  created_at integer not null
+);
+
+create index if not exists analytics_events_by_name_time on analytics_events (name, created_at desc);
+create index if not exists analytics_events_by_time on analytics_events (created_at desc);

@@ -1,7 +1,7 @@
 import { NextRequest } from "next/server";
 import type Stripe from "stripe";
 import { getStripe } from "@/lib/stripe";
-import { cloudflareEnv, run } from "@/lib/cloudflare-store";
+import { cloudflareEnv, recordEvent, run } from "@/lib/cloudflare-store";
 
 async function sendResendEmail(options: { to: string; subject: string; html: string }) {
   const apiKey = process.env.RESEND_API_KEY;
@@ -55,6 +55,14 @@ async function syncSubscription(sub: Stripe.Subscription) {
     periodEnd,
     Date.now(),
   );
+  if (sub.status === "active" || sub.status === "trialing") {
+    await recordEvent({
+      name: "subscription_active",
+      clerkUserId,
+      path: "/api/stripe/webhook",
+      metadata: { plan: planForPrice(sub.items.data[0]?.price?.id), status: sub.status },
+    });
+  }
 }
 
 async function notifySubscriptionChange(sub: Stripe.Subscription, eventType: string) {

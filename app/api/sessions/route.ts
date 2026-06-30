@@ -6,6 +6,7 @@ import {
   createId,
   incrementQuestionUsage,
   json,
+  recordEvent,
   run,
 } from "@/lib/cloudflare-store";
 
@@ -91,5 +92,11 @@ export async function POST(req: NextRequest) {
   }
 
   await incrementQuestionUsage(session.userId, answers.length);
+  await recordEvent({
+    name: "practice_session_completed",
+    clerkUserId: session.userId,
+    path: "/api/sessions",
+    metadata: { examId, total: answers.length, correct },
+  });
   return json({ id: sessionId });
 }

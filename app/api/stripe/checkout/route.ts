@@ -1,5 +1,6 @@
 import { auth, currentUser } from "@clerk/nextjs/server";
 import { NextRequest, NextResponse } from "next/server";
+import { recordEvent } from "@/lib/cloudflare-store";
 import { getStripe, getStripePriceId } from "@/lib/stripe";
 
 export async function POST(req: NextRequest) {
@@ -39,6 +40,12 @@ export async function POST(req: NextRequest) {
         email: user?.primaryEmailAddress?.emailAddress ?? "",
       },
     },
+  });
+  await recordEvent({
+    name: "checkout_initiated",
+    clerkUserId: userId,
+    path: "/api/stripe/checkout",
+    metadata: { lookupKey, price },
   });
 
   return NextResponse.json({ url: session.url });

@@ -1,7 +1,7 @@
 import { auth } from "@clerk/nextjs/server";
 import { NextRequest, NextResponse } from "next/server";
 import { estimateOpenRouterCostUsd, monthStartUtcMs } from "@/lib/ai-pricing";
-import { cloudflareEnv, createId, getEntitlements, run } from "@/lib/cloudflare-store";
+import { cloudflareEnv, createId, getEntitlements, recordEvent, run } from "@/lib/cloudflare-store";
 
 export const runtime = "edge";
 
@@ -132,6 +132,17 @@ export async function POST(req: NextRequest) {
   );
 
   const updated = await getEntitlements(session.userId);
+  await recordEvent({
+    name: "ai_message_sent",
+    clerkUserId: session.userId,
+    path: "/api/chat",
+    metadata: {
+      examId: typeof body?.examId === "string" ? body.examId : undefined,
+      kind: typeof body?.kind === "string" ? body.kind : undefined,
+      estimatedCostUsd,
+      model,
+    },
+  });
 
   return NextResponse.json({
     text: data?.choices?.[0]?.message?.content ?? "",

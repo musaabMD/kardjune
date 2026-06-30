@@ -16,6 +16,10 @@
     {
       "pattern": "www.drkard.com",
       "custom_domain": true
+    },
+    {
+      "pattern": "hq.drkard.com",
+      "custom_domain": true
     }
   ],
   "services": [

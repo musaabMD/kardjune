@@ -2,6 +2,7 @@ import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { FREE_QUESTIONS_PER_24H, FREE_UPLOADS_PER_24H } from "@/lib/billing-limits";
 import { PRO_AI_BUDGET_USD } from "@/lib/constants";
 import { monthStartUtcMs, nextMonthStartUtcMs } from "@/lib/ai-pricing";
+import { ACTIVE_GOAL_NAMES } from "@/lib/hq-goals";
 import { SAMPLE_EXAMS, sampleQuestionsForExam, type BankQuestion, type ExamRecord } from "@/lib/sample-data";
 
 const PRO_STATUSES = new Set(["active", "trialing", "past_due"]);
@@ -63,6 +64,28 @@ export async function first<T>(db: D1Database | undefined, sql: string, ...binds
 export async function run(db: D1Database | undefined, sql: string, ...binds: unknown[]) {
   if (!db) return null;
   return await db.prepare(sql).bind(...binds).run();
+}
+
+export async function recordEvent(options: {
+  name: string;
+  clerkUserId?: string | null;
+  path?: string | null;
+  metadata?: Record<string, unknown>;
+}) {
+  if (!ACTIVE_GOAL_NAMES.has(options.name)) return;
+  const env = await cloudflareEnv();
+  await run(
+    env.DRKARD_DB,
+    `insert into analytics_events
+      (id, name, clerk_user_id, path, metadata, created_at)
+     values (?, ?, ?, ?, ?, ?)`,
+    createId("evt"),
+    options.name,
+    options.clerkUserId ?? null,
+    options.path ?? null,
+    options.metadata ? JSON.stringify(options.metadata).slice(0, 2000) : null,
+    Date.now(),
+  );
 }
 
 export function currentPeriodKey(now = new Date()) {

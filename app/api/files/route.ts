@@ -6,6 +6,7 @@ import {
   cloudflareEnv,
   createId,
   incrementUploadUsage,
+  recordEvent,
   run,
 } from "@/lib/cloudflare-store";
 
@@ -79,6 +80,12 @@ async function recordUpload(row: {
     Date.now(),
   );
   await incrementUploadUsage(row.userId);
+  await recordEvent({
+    name: "upload_completed",
+    clerkUserId: row.userId,
+    path: "/api/files",
+    metadata: { key: row.key, name: row.name, size: row.size, contentType: row.contentType },
+  });
 }
 
 export async function GET() {
