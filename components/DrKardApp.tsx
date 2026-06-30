@@ -12,7 +12,7 @@ import {
   Image as ImageIcon, Flame, Stethoscope, Scale, Cpu, Briefcase, Languages,
   FlaskConical, Landmark, Calculator, PenTool, Globe, Copy, Share2,
 } from "lucide-react";
-import { SignInButton, SignUpButton, UserButton, useAuth, useUser } from "@clerk/nextjs";
+import { SignInButton, UserButton, useAuth, useUser } from "@clerk/nextjs";
 import {
   MessageScroller,
   MessageScrollerButton,
@@ -2129,6 +2129,10 @@ export function DrKardApp({ initialPath = "/" }: { initialPath?: string }) {
   const TAB_META = { browse: { label: "Library", icon: LayoutGrid, color: C.teal, wash: C.tealWash, shadow: C.tealDark }, upload: { label: "Upload", icon: UploadCloud, color: C.ink, wash: C.inkWash, shadow: C.inkDark } } as const;
   const goHome = () => { setPage("home"); setTab("browse"); setExam(null); setExamTab(DEFAULT_EXAM_TAB); setFlashSlug(null); setQuizSlug(null); setQuizResult(false); setAiThreadId(null); setPracticeSlug(null); setFlashTest(false); setNoteSlug(null); };
   const openExam = (e: ExamItem) => { trackGoal("exam_opened", { examId: e._id ?? e.slug ?? slugify(e.title), title: e.title }); setExam(e); setPage("exam"); setFlashSlug(null); setQuizSlug(null); setQuizResult(false); setAiThreadId(null); setPracticeSlug(null); setFlashTest(false); setNoteSlug(null); };
+  const startSignup = () => {
+    trackGoal("signup_started");
+    window.location.assign("/sign-up");
+  };
   const billingProps = {
     isPro: entitlements?.isPro,
     questionsRemaining: entitlements?.questionsRemaining ?? null,
@@ -2150,9 +2154,7 @@ export function DrKardApp({ initialPath = "/" }: { initialPath?: string }) {
               <div className="flex items-center gap-2">
                 <HeaderActions isSignedIn={!!isSignedIn} onUpgrade={() => setPricing(true)} {...billingProps} />
                 {isSignedIn ? <UserButton /> : (
-                  <SignUpButton mode="modal">
-                    <button type="button" onClick={() => trackGoal("signup_started")} className="rounded-2xl bg-white px-4 py-2.5 text-sm font-black uppercase tracking-wide active:translate-y-0.5" style={{ color: C.eel, boxShadow: "0 3px 0 rgba(0,0,0,.18)" }}>Get started</button>
-                  </SignUpButton>
+                  <button type="button" onClick={startSignup} className="rounded-2xl bg-white px-4 py-2.5 text-sm font-black uppercase tracking-wide active:translate-y-0.5" style={{ color: C.eel, boxShadow: "0 3px 0 rgba(0,0,0,.18)" }}>Get started</button>
                 )}
               </div>
             </div>
@@ -2220,9 +2222,7 @@ export function DrKardApp({ initialPath = "/" }: { initialPath?: string }) {
               <div className="flex items-center gap-2">
                 <HeaderActions isSignedIn={!!isSignedIn} onUpgrade={() => setPricing(true)} {...billingProps} />
                 {isSignedIn ? <><button type="button" onClick={() => setPage("dashboard")} aria-label="Dashboard" title="Dashboard" className="grid h-10 w-10 place-items-center rounded-2xl bg-white active:translate-y-0.5" style={{ color: C.eel, boxShadow: "0 3px 0 rgba(0,0,0,.18)" }}><LayoutGrid size={18} strokeWidth={3} /></button><UserButton /></> : (
-                  <SignUpButton mode="modal">
-                    <button type="button" onClick={() => trackGoal("signup_started")} className="rounded-2xl px-4 py-2.5 text-sm font-black uppercase tracking-wide active:translate-y-0.5" style={{ background: C.teal, color: C.white, boxShadow: `0 3px 0 ${C.tealDark}` }}>Get started</button>
-                  </SignUpButton>
+                  <button type="button" onClick={startSignup} className="rounded-2xl px-4 py-2.5 text-sm font-black uppercase tracking-wide active:translate-y-0.5" style={{ background: C.teal, color: C.white, boxShadow: `0 3px 0 ${C.tealDark}` }}>Get started</button>
                 )}
               </div>
             </div>

@@ -224,30 +224,20 @@ function AssigneeRenderer(params: ICellRendererParams<GridRow, Assignee>) {
   return <Tag label={value} tone={assigneeTagTone[value]} />;
 }
 
-function Avatar({ initials, color }: { initials: string; color: string }) {
-  return (
-    <div className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-xs font-semibold ${color}`}>
-      {initials}
-    </div>
-  );
-}
-
 function StatCell({
   label,
   stat,
-  highlight,
 }: {
   label: string;
   stat: Stat;
-  highlight?: boolean;
 }) {
   const Arrow = stat.dir === "up" ? ArrowUp : ArrowDown;
   const tone = stat.good ? "text-emerald-600" : "text-rose-600";
   return (
-    <div className={`flex flex-col items-center justify-center gap-1 py-3 ${highlight ? "rounded-xl border border-slate-200 bg-white shadow-sm" : ""}`}>
-      <span className="text-sm font-semibold text-slate-700">{label}</span>
-      <span className={`flex items-center gap-0.5 text-sm font-semibold ${tone}`}>
-        <Arrow className="h-3.5 w-3.5" strokeWidth={2.5} />
+    <div className="flex flex-col items-center justify-center gap-1 rounded-lg bg-white px-2 py-2">
+      <span className="text-[11px] font-bold uppercase text-slate-500">{label}</span>
+      <span className={`flex items-center gap-0.5 text-xs font-bold ${tone}`}>
+        <Arrow className="h-3 w-3" strokeWidth={2.5} />
         {stat.value}
       </span>
     </div>
@@ -274,33 +264,33 @@ function MetricCard({
     <button
       type="button"
       onClick={onClick}
-      className="group flex w-full flex-col rounded-2xl border border-slate-200 bg-white p-5 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+      className="group flex w-full flex-col rounded-xl border border-slate-200 bg-white p-4 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
     >
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2.5">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-100 text-slate-600">
-            <Icon className="h-4 w-4" strokeWidth={2} />
-          </div>
-          <h3 className="text-base font-semibold leading-tight text-slate-900">{metric.title}</h3>
+      <div className="flex items-center gap-2.5">
+        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-slate-100 text-slate-600">
+          <Icon className="h-4 w-4" strokeWidth={2} />
         </div>
-        <Avatar initials={metric.owner.initials} color={metric.owner.color} />
+        <div className="min-w-0">
+          <h3 className="truncate text-sm font-bold leading-tight text-slate-900">{metric.title}</h3>
+          <p className="mt-0.5 truncate text-xs font-semibold text-slate-400">{metric.category}</p>
+        </div>
       </div>
 
-      <div className="mt-5 flex flex-col items-center">
-        <span className="text-5xl font-extrabold tracking-tight text-slate-900">{metric.value}</span>
-        <span className="mt-1 text-sm font-medium text-slate-400">{metric.unit}</span>
+      <div className="mt-4 flex flex-col">
+        <span className="text-4xl font-extrabold tracking-tight text-slate-900">{metric.value}</span>
+        <span className="mt-1 truncate text-xs font-semibold text-slate-400">{metric.unit}</span>
       </div>
 
-      <div className="mt-5 grid grid-cols-3 gap-1 rounded-2xl bg-slate-50 p-1.5">
-        <StatCell label="WoW" stat={metric.stats.wow} highlight />
+      <div className="mt-4 grid grid-cols-3 gap-1 rounded-xl bg-slate-50 p-1">
+        <StatCell label="WoW" stat={metric.stats.wow} />
         <StatCell label="MoM" stat={metric.stats.mom} />
         <StatCell label="YoY" stat={metric.stats.yoy} />
       </div>
 
-      <div className="mt-5">
+      <div className="mt-4">
         <div className="mb-2 flex items-center justify-between">
-          <span className="text-sm font-semibold text-slate-800">{metric.target.label}</span>
-          <span className={`flex items-center gap-1.5 text-sm font-semibold ${statusTone[metric.target.status]}`}>
+          <span className="truncate text-xs font-bold text-slate-700">{metric.target.label}</span>
+          <span className={`ml-2 flex shrink-0 items-center gap-1.5 text-xs font-bold ${statusTone[metric.target.status]}`}>
             <span className={`h-2 w-2 rounded-full ${statusDot[metric.target.status]}`} />
             {metric.target.status}
           </span>
@@ -330,6 +320,12 @@ function DetailView({
   const [editedRows, setEditedRows] = useState<Record<number, Partial<GridRow>>>({});
   const [bulkColumn, setBulkColumn] = useState<EditableField>("status");
   const [bulkValue, setBulkValue] = useState(defaultBulkValue("status"));
+  const [qbankSlug, setQbankSlug] = useState("");
+  const [qbankTitle, setQbankTitle] = useState("");
+  const [qbankRole, setQbankRole] = useState("Exam");
+  const [qbankJson, setQbankJson] = useState("");
+  const [qbankMessage, setQbankMessage] = useState("");
+  const [qbankSaving, setQbankSaving] = useState(false);
   const bulkOptions = useMemo(() => bulkOptionsFor(bulkColumn), [bulkColumn]);
   const tableColumns = useMemo(() => metric.columns?.length ? metric.columns : defaultColumns, [metric.columns]);
   const editableFields = useMemo(
@@ -470,6 +466,48 @@ function DetailView({
     const field = event.colDef.field as EditableField | undefined;
     if (!field || !event.data || event.newValue === event.oldValue) return;
     updateRows([event.data], field, String(event.newValue ?? ""));
+  };
+
+  const loadSelectedQuestionBank = () => {
+    const selected = gridApi?.getSelectedRows()[0];
+    if (!selected) return;
+    setQbankSlug(String(selected.slug ?? selected.period ?? ""));
+    setQbankTitle(String(selected.title ?? selected.value ?? ""));
+    setQbankRole(String(selected.role ?? selected.vsTarget ?? "Exam"));
+    setQbankMessage("Paste the updated questions JSON array, then save.");
+  };
+
+  const saveQuestionBank = async () => {
+    setQbankMessage("");
+    setQbankSaving(true);
+    try {
+      const parsed = JSON.parse(qbankJson);
+      const questions = Array.isArray(parsed) ? parsed : parsed?.questions;
+      if (!Array.isArray(questions)) {
+        setQbankMessage("Questions JSON must be an array or { questions: [...] }.");
+        return;
+      }
+      const res = await fetch("/api/admin/qbanks", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          slug: qbankSlug,
+          title: qbankTitle,
+          role: qbankRole,
+          questions,
+        }),
+      });
+      const data = (await res.json().catch(() => ({}))) as { error?: string; questionCount?: number; key?: string };
+      if (!res.ok) {
+        setQbankMessage(data.error ?? "Save failed.");
+        return;
+      }
+      setQbankMessage(`Saved ${data.questionCount ?? questions.length} questions to ${data.key ?? "Cloudflare R2"}. Refresh HQ to see counts.`);
+    } catch {
+      setQbankMessage("Invalid JSON.");
+    } finally {
+      setQbankSaving(false);
+    }
   };
 
   return (
@@ -636,6 +674,57 @@ function DetailView({
         </button>
       </div>
 
+      {metric.id === "question-bank" && (
+        <div className="flex flex-none flex-col gap-3 border-b border-slate-300 bg-slate-50 px-4 py-3 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="text-sm font-extrabold uppercase text-slate-500">Question bank updater</span>
+            <button
+              type="button"
+              onClick={loadSelectedQuestionBank}
+              disabled={!selectedCount}
+              className="h-9 rounded-lg border border-slate-300 bg-white px-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:border-slate-400 disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              Load selected exam
+            </button>
+            {qbankMessage && <span className="text-sm font-semibold text-slate-500">{qbankMessage}</span>}
+          </div>
+          <div className="grid gap-2 lg:grid-cols-[12rem_18rem_12rem_1fr_auto]">
+            <input
+              value={qbankSlug}
+              onChange={(event) => setQbankSlug(event.target.value)}
+              placeholder="exam-slug"
+              className="h-10 rounded-lg border border-slate-300 bg-white px-3 text-sm font-semibold text-slate-800 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
+            />
+            <input
+              value={qbankTitle}
+              onChange={(event) => setQbankTitle(event.target.value)}
+              placeholder="Exam title"
+              className="h-10 rounded-lg border border-slate-300 bg-white px-3 text-sm font-semibold text-slate-800 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
+            />
+            <input
+              value={qbankRole}
+              onChange={(event) => setQbankRole(event.target.value)}
+              placeholder="Role"
+              className="h-10 rounded-lg border border-slate-300 bg-white px-3 text-sm font-semibold text-slate-800 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
+            />
+            <input
+              value={qbankJson}
+              onChange={(event) => setQbankJson(event.target.value)}
+              placeholder='Paste questions JSON: [{"_id":"q1","prompt":"...","options":[...],"answerIndex":0}]'
+              className="h-10 min-w-0 rounded-lg border border-slate-300 bg-white px-3 text-sm font-semibold text-slate-800 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
+            />
+            <button
+              type="button"
+              onClick={saveQuestionBank}
+              disabled={qbankSaving || !qbankTitle.trim() || !qbankJson.trim()}
+              className="h-10 rounded-lg bg-slate-900 px-4 text-sm font-bold text-white shadow-sm transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              {qbankSaving ? "Saving" : "Save to Cloudflare"}
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className="min-h-0 flex-1 bg-white">
         <div ref={gridContainerRef} className="hq-ag-grid h-full min-h-full w-full">
           <AgGridReact<GridRow>
@@ -799,13 +888,13 @@ export default function HqDashboard({ metrics }: { metrics: HqMetric[] }) {
       </div>
       )}
 
-      <div className={selected ? "w-full" : "w-full px-4 py-5 sm:px-6 lg:px-8"}>
+      <div className={selected ? "w-full" : "w-full px-4 py-4 sm:px-6 lg:px-8"}>
         {selected ? (
           <DetailView metric={selected} onBack={() => setSelectedId(null)} />
         ) : (
           <>
             {filtered.length > 0 ? (
-              <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5">
                 {filtered.map((metric) => (
                   <MetricCard key={metric.id} metric={metric} onClick={() => setSelectedId(metric.id)} />
                 ))}
