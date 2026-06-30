@@ -18,8 +18,10 @@ export const metadata: Metadata = {
 
 const clerkProviderProps = {
   dynamic: true,
-  __internal_clerkJSUrl: "https://cdn.jsdelivr.net/npm/@clerk/clerk-js@6/dist/clerk.browser.js",
-  __internal_clerkUIUrl: "https://cdn.jsdelivr.net/npm/@clerk/ui@1/dist/ui.browser.js",
+  __internal_clerkJSUrl:
+    "https://cdn.jsdelivr.net/npm/@clerk/clerk-js@6.23.0/dist/clerk.browser.js",
+  __internal_clerkUIUrl:
+    "https://cdn.jsdelivr.net/npm/@clerk/ui@1.24.0/dist/ui.browser.js",
 } as React.ComponentProps<typeof ClerkProvider> & {
   __internal_clerkJSUrl: string;
   __internal_clerkUIUrl: string;
