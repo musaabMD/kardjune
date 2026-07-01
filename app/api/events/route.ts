@@ -1,7 +1,7 @@
 import { auth } from "@clerk/nextjs/server";
 import { NextRequest } from "next/server";
-import { ACTIVE_GOAL_NAMES } from "@/lib/hq-goals";
 import { cloudflareEnv, createId, json, run } from "@/lib/cloudflare-store";
+import { getActiveGoalNames } from "@/lib/hq-goals-store";
 
 export async function POST(req: NextRequest) {
   const body = (await req.json().catch(() => null)) as {
@@ -10,12 +10,13 @@ export async function POST(req: NextRequest) {
     metadata?: unknown;
   } | null;
   const name = typeof body?.name === "string" ? body.name : "";
-  if (!ACTIVE_GOAL_NAMES.has(name)) {
+  const env = await cloudflareEnv();
+  const activeGoalNames = await getActiveGoalNames(env.DRKARD_DB);
+  if (!activeGoalNames.has(name)) {
     return json({ error: "Unknown event." }, { status: 400 });
   }
 
   const session = await auth();
-  const env = await cloudflareEnv();
   await run(
     env.DRKARD_DB,
     `insert into analytics_events

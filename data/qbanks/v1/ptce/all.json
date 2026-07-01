@@ -1,0 +1,904 @@
+{
+  "questions": [
+    {
+      "_id": "ptce-001",
+      "examId": "ptce",
+      "subject": "Medications",
+      "prompt": "A learner is starting PTCE review for Medications. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Build a checklist for medications that links the stem clues to the safest or most defensible next step.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Medications questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "ptce-002",
+      "examId": "ptce",
+      "subject": "Federal requirements",
+      "prompt": "On a PTCE practice set, a question about Federal requirements includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Federal requirements.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "ptce-003",
+      "examId": "ptce",
+      "subject": "Patient safety and quality assurance",
+      "prompt": "Which answer choice would be most consistent with strong PTCE performance in Patient safety and quality assurance?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "ptce-004",
+      "examId": "ptce",
+      "subject": "Order entry and processing",
+      "prompt": "A candidate repeatedly misses Order entry and processing items while preparing for PTCE. What remediation step is most useful?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Review missed-question rationales and group them by the underlying concept being tested."
+      ],
+      "answerIndex": 3,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Order entry and processing.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "ptce-005",
+      "examId": "ptce",
+      "subject": "Pharmacy calculations",
+      "prompt": "During timed PTCE practice, what is the best approach to a difficult Pharmacy calculations item?",
+      "options": [
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "ptce-006",
+      "examId": "ptce",
+      "subject": "Inventory management",
+      "prompt": "A learner is starting PTCE review for Inventory management. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "Build a checklist for inventory management that links the stem clues to the safest or most defensible next step.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "Inventory management questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "ptce-007",
+      "examId": "ptce",
+      "subject": "Sterile and nonsterile compounding",
+      "prompt": "On a PTCE practice set, a question about Sterile and nonsterile compounding includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Sterile and nonsterile compounding.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "ptce-008",
+      "examId": "ptce",
+      "subject": "Pharmacology basics",
+      "prompt": "Which answer choice would be most consistent with strong PTCE performance in Pharmacology basics?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem."
+      ],
+      "answerIndex": 3,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "ptce-009",
+      "examId": "ptce",
+      "subject": "Medication safety",
+      "prompt": "A candidate repeatedly misses Medication safety items while preparing for PTCE. What remediation step is most useful?",
+      "options": [
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Medication safety.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "ptce-010",
+      "examId": "ptce",
+      "subject": "Billing and reimbursement",
+      "prompt": "During timed PTCE practice, what is the best approach to a difficult Billing and reimbursement item?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "ptce-011",
+      "examId": "ptce",
+      "subject": "Medications",
+      "prompt": "A learner is starting PTCE review for Medications. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Build a checklist for medications that links the stem clues to the safest or most defensible next step.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "Medications questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "ptce-012",
+      "examId": "ptce",
+      "subject": "Federal requirements",
+      "prompt": "On a PTCE practice set, a question about Federal requirements includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Identify the command word and the highest-value clue before comparing the answer choices."
+      ],
+      "answerIndex": 3,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Federal requirements.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "ptce-013",
+      "examId": "ptce",
+      "subject": "Patient safety and quality assurance",
+      "prompt": "Which answer choice would be most consistent with strong PTCE performance in Patient safety and quality assurance?",
+      "options": [
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "ptce-014",
+      "examId": "ptce",
+      "subject": "Order entry and processing",
+      "prompt": "A candidate repeatedly misses Order entry and processing items while preparing for PTCE. What remediation step is most useful?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Order entry and processing.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "ptce-015",
+      "examId": "ptce",
+      "subject": "Pharmacy calculations",
+      "prompt": "During timed PTCE practice, what is the best approach to a difficult Pharmacy calculations item?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "ptce-016",
+      "examId": "ptce",
+      "subject": "Inventory management",
+      "prompt": "A learner is starting PTCE review for Inventory management. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Build a checklist for inventory management that links the stem clues to the safest or most defensible next step."
+      ],
+      "answerIndex": 3,
+      "explanation": "Inventory management questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "ptce-017",
+      "examId": "ptce",
+      "subject": "Sterile and nonsterile compounding",
+      "prompt": "On a PTCE practice set, a question about Sterile and nonsterile compounding includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Sterile and nonsterile compounding.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "ptce-018",
+      "examId": "ptce",
+      "subject": "Pharmacology basics",
+      "prompt": "Which answer choice would be most consistent with strong PTCE performance in Pharmacology basics?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "ptce-019",
+      "examId": "ptce",
+      "subject": "Medication safety",
+      "prompt": "A candidate repeatedly misses Medication safety items while preparing for PTCE. What remediation step is most useful?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Medication safety.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "ptce-020",
+      "examId": "ptce",
+      "subject": "Billing and reimbursement",
+      "prompt": "During timed PTCE practice, what is the best approach to a difficult Billing and reimbursement item?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows."
+      ],
+      "answerIndex": 3,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "ptce-021",
+      "examId": "ptce",
+      "subject": "Medications",
+      "prompt": "A learner is starting PTCE review for Medications. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Build a checklist for medications that links the stem clues to the safest or most defensible next step.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "Medications questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "ptce-022",
+      "examId": "ptce",
+      "subject": "Federal requirements",
+      "prompt": "On a PTCE practice set, a question about Federal requirements includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Federal requirements.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "ptce-023",
+      "examId": "ptce",
+      "subject": "Patient safety and quality assurance",
+      "prompt": "Which answer choice would be most consistent with strong PTCE performance in Patient safety and quality assurance?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "ptce-024",
+      "examId": "ptce",
+      "subject": "Order entry and processing",
+      "prompt": "A candidate repeatedly misses Order entry and processing items while preparing for PTCE. What remediation step is most useful?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Review missed-question rationales and group them by the underlying concept being tested."
+      ],
+      "answerIndex": 3,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Order entry and processing.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "ptce-025",
+      "examId": "ptce",
+      "subject": "Pharmacy calculations",
+      "prompt": "During timed PTCE practice, what is the best approach to a difficult Pharmacy calculations item?",
+      "options": [
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "ptce-026",
+      "examId": "ptce",
+      "subject": "Inventory management",
+      "prompt": "A learner is starting PTCE review for Inventory management. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Build a checklist for inventory management that links the stem clues to the safest or most defensible next step.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "Inventory management questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "ptce-027",
+      "examId": "ptce",
+      "subject": "Sterile and nonsterile compounding",
+      "prompt": "On a PTCE practice set, a question about Sterile and nonsterile compounding includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Sterile and nonsterile compounding.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "ptce-028",
+      "examId": "ptce",
+      "subject": "Pharmacology basics",
+      "prompt": "Which answer choice would be most consistent with strong PTCE performance in Pharmacology basics?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem."
+      ],
+      "answerIndex": 3,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "ptce-029",
+      "examId": "ptce",
+      "subject": "Medication safety",
+      "prompt": "A candidate repeatedly misses Medication safety items while preparing for PTCE. What remediation step is most useful?",
+      "options": [
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Medication safety.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "ptce-030",
+      "examId": "ptce",
+      "subject": "Billing and reimbursement",
+      "prompt": "During timed PTCE practice, what is the best approach to a difficult Billing and reimbursement item?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "ptce-031",
+      "examId": "ptce",
+      "subject": "Medications",
+      "prompt": "A learner is starting PTCE review for Medications. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Build a checklist for medications that links the stem clues to the safest or most defensible next step.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "Medications questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "ptce-032",
+      "examId": "ptce",
+      "subject": "Federal requirements",
+      "prompt": "On a PTCE practice set, a question about Federal requirements includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Identify the command word and the highest-value clue before comparing the answer choices."
+      ],
+      "answerIndex": 3,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Federal requirements.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "ptce-033",
+      "examId": "ptce",
+      "subject": "Patient safety and quality assurance",
+      "prompt": "Which answer choice would be most consistent with strong PTCE performance in Patient safety and quality assurance?",
+      "options": [
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "ptce-034",
+      "examId": "ptce",
+      "subject": "Order entry and processing",
+      "prompt": "A candidate repeatedly misses Order entry and processing items while preparing for PTCE. What remediation step is most useful?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Order entry and processing.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "ptce-035",
+      "examId": "ptce",
+      "subject": "Pharmacy calculations",
+      "prompt": "During timed PTCE practice, what is the best approach to a difficult Pharmacy calculations item?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "ptce-036",
+      "examId": "ptce",
+      "subject": "Inventory management",
+      "prompt": "A learner is starting PTCE review for Inventory management. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Build a checklist for inventory management that links the stem clues to the safest or most defensible next step."
+      ],
+      "answerIndex": 3,
+      "explanation": "Inventory management questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "ptce-037",
+      "examId": "ptce",
+      "subject": "Sterile and nonsterile compounding",
+      "prompt": "On a PTCE practice set, a question about Sterile and nonsterile compounding includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Sterile and nonsterile compounding.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "ptce-038",
+      "examId": "ptce",
+      "subject": "Pharmacology basics",
+      "prompt": "Which answer choice would be most consistent with strong PTCE performance in Pharmacology basics?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "ptce-039",
+      "examId": "ptce",
+      "subject": "Medication safety",
+      "prompt": "A candidate repeatedly misses Medication safety items while preparing for PTCE. What remediation step is most useful?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Medication safety.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "ptce-040",
+      "examId": "ptce",
+      "subject": "Billing and reimbursement",
+      "prompt": "During timed PTCE practice, what is the best approach to a difficult Billing and reimbursement item?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows."
+      ],
+      "answerIndex": 3,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "ptce-041",
+      "examId": "ptce",
+      "subject": "Medications",
+      "prompt": "A learner is starting PTCE review for Medications. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Build a checklist for medications that links the stem clues to the safest or most defensible next step.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Medications questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "ptce-042",
+      "examId": "ptce",
+      "subject": "Federal requirements",
+      "prompt": "On a PTCE practice set, a question about Federal requirements includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Federal requirements.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "ptce-043",
+      "examId": "ptce",
+      "subject": "Patient safety and quality assurance",
+      "prompt": "Which answer choice would be most consistent with strong PTCE performance in Patient safety and quality assurance?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "ptce-044",
+      "examId": "ptce",
+      "subject": "Order entry and processing",
+      "prompt": "A candidate repeatedly misses Order entry and processing items while preparing for PTCE. What remediation step is most useful?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Review missed-question rationales and group them by the underlying concept being tested."
+      ],
+      "answerIndex": 3,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Order entry and processing.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "ptce-045",
+      "examId": "ptce",
+      "subject": "Pharmacy calculations",
+      "prompt": "During timed PTCE practice, what is the best approach to a difficult Pharmacy calculations item?",
+      "options": [
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "ptce-046",
+      "examId": "ptce",
+      "subject": "Inventory management",
+      "prompt": "A learner is starting PTCE review for Inventory management. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "Build a checklist for inventory management that links the stem clues to the safest or most defensible next step.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "Inventory management questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "ptce-047",
+      "examId": "ptce",
+      "subject": "Sterile and nonsterile compounding",
+      "prompt": "On a PTCE practice set, a question about Sterile and nonsterile compounding includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Sterile and nonsterile compounding.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "ptce-048",
+      "examId": "ptce",
+      "subject": "Pharmacology basics",
+      "prompt": "Which answer choice would be most consistent with strong PTCE performance in Pharmacology basics?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem."
+      ],
+      "answerIndex": 3,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "ptce-049",
+      "examId": "ptce",
+      "subject": "Medication safety",
+      "prompt": "A candidate repeatedly misses Medication safety items while preparing for PTCE. What remediation step is most useful?",
+      "options": [
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Medication safety.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "ptce-050",
+      "examId": "ptce",
+      "subject": "Billing and reimbursement",
+      "prompt": "During timed PTCE practice, what is the best approach to a difficult Billing and reimbursement item?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    }
+  ]
+}

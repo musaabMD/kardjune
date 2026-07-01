@@ -1,0 +1,904 @@
+{
+  "questions": [
+    {
+      "_id": "nha-ccma-001",
+      "examId": "nha-ccma",
+      "subject": "Foundational knowledge",
+      "prompt": "A learner is starting NHA CCMA review for Foundational knowledge. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Build a checklist for foundational knowledge that links the stem clues to the safest or most defensible next step.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Foundational knowledge questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "nha-ccma-002",
+      "examId": "nha-ccma",
+      "subject": "Clinical patient care",
+      "prompt": "On a NHA CCMA practice set, a question about Clinical patient care includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Clinical patient care.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "nha-ccma-003",
+      "examId": "nha-ccma",
+      "subject": "Patient intake and documentation",
+      "prompt": "Which answer choice would be most consistent with strong NHA CCMA performance in Patient intake and documentation?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "nha-ccma-004",
+      "examId": "nha-ccma",
+      "subject": "Infection control",
+      "prompt": "A candidate repeatedly misses Infection control items while preparing for NHA CCMA. What remediation step is most useful?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Review missed-question rationales and group them by the underlying concept being tested."
+      ],
+      "answerIndex": 3,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Infection control.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "nha-ccma-005",
+      "examId": "nha-ccma",
+      "subject": "Phlebotomy",
+      "prompt": "During timed NHA CCMA practice, what is the best approach to a difficult Phlebotomy item?",
+      "options": [
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "nha-ccma-006",
+      "examId": "nha-ccma",
+      "subject": "EKG and cardiovascular testing",
+      "prompt": "A learner is starting NHA CCMA review for EKG and cardiovascular testing. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "Build a checklist for ekg and cardiovascular testing that links the stem clues to the safest or most defensible next step.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "EKG and cardiovascular testing questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "nha-ccma-007",
+      "examId": "nha-ccma",
+      "subject": "Medication administration",
+      "prompt": "On a NHA CCMA practice set, a question about Medication administration includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Medication administration.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "nha-ccma-008",
+      "examId": "nha-ccma",
+      "subject": "Administrative assisting",
+      "prompt": "Which answer choice would be most consistent with strong NHA CCMA performance in Administrative assisting?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem."
+      ],
+      "answerIndex": 3,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "nha-ccma-009",
+      "examId": "nha-ccma",
+      "subject": "Communication and professionalism",
+      "prompt": "A candidate repeatedly misses Communication and professionalism items while preparing for NHA CCMA. What remediation step is most useful?",
+      "options": [
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Communication and professionalism.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "nha-ccma-010",
+      "examId": "nha-ccma",
+      "subject": "Medical law and ethics",
+      "prompt": "During timed NHA CCMA practice, what is the best approach to a difficult Medical law and ethics item?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "nha-ccma-011",
+      "examId": "nha-ccma",
+      "subject": "Foundational knowledge",
+      "prompt": "A learner is starting NHA CCMA review for Foundational knowledge. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Build a checklist for foundational knowledge that links the stem clues to the safest or most defensible next step.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "Foundational knowledge questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "nha-ccma-012",
+      "examId": "nha-ccma",
+      "subject": "Clinical patient care",
+      "prompt": "On a NHA CCMA practice set, a question about Clinical patient care includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Identify the command word and the highest-value clue before comparing the answer choices."
+      ],
+      "answerIndex": 3,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Clinical patient care.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "nha-ccma-013",
+      "examId": "nha-ccma",
+      "subject": "Patient intake and documentation",
+      "prompt": "Which answer choice would be most consistent with strong NHA CCMA performance in Patient intake and documentation?",
+      "options": [
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "nha-ccma-014",
+      "examId": "nha-ccma",
+      "subject": "Infection control",
+      "prompt": "A candidate repeatedly misses Infection control items while preparing for NHA CCMA. What remediation step is most useful?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Infection control.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "nha-ccma-015",
+      "examId": "nha-ccma",
+      "subject": "Phlebotomy",
+      "prompt": "During timed NHA CCMA practice, what is the best approach to a difficult Phlebotomy item?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "nha-ccma-016",
+      "examId": "nha-ccma",
+      "subject": "EKG and cardiovascular testing",
+      "prompt": "A learner is starting NHA CCMA review for EKG and cardiovascular testing. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Build a checklist for ekg and cardiovascular testing that links the stem clues to the safest or most defensible next step."
+      ],
+      "answerIndex": 3,
+      "explanation": "EKG and cardiovascular testing questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "nha-ccma-017",
+      "examId": "nha-ccma",
+      "subject": "Medication administration",
+      "prompt": "On a NHA CCMA practice set, a question about Medication administration includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Medication administration.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "nha-ccma-018",
+      "examId": "nha-ccma",
+      "subject": "Administrative assisting",
+      "prompt": "Which answer choice would be most consistent with strong NHA CCMA performance in Administrative assisting?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "nha-ccma-019",
+      "examId": "nha-ccma",
+      "subject": "Communication and professionalism",
+      "prompt": "A candidate repeatedly misses Communication and professionalism items while preparing for NHA CCMA. What remediation step is most useful?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Communication and professionalism.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "nha-ccma-020",
+      "examId": "nha-ccma",
+      "subject": "Medical law and ethics",
+      "prompt": "During timed NHA CCMA practice, what is the best approach to a difficult Medical law and ethics item?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows."
+      ],
+      "answerIndex": 3,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "nha-ccma-021",
+      "examId": "nha-ccma",
+      "subject": "Foundational knowledge",
+      "prompt": "A learner is starting NHA CCMA review for Foundational knowledge. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Build a checklist for foundational knowledge that links the stem clues to the safest or most defensible next step.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "Foundational knowledge questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "nha-ccma-022",
+      "examId": "nha-ccma",
+      "subject": "Clinical patient care",
+      "prompt": "On a NHA CCMA practice set, a question about Clinical patient care includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Clinical patient care.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "nha-ccma-023",
+      "examId": "nha-ccma",
+      "subject": "Patient intake and documentation",
+      "prompt": "Which answer choice would be most consistent with strong NHA CCMA performance in Patient intake and documentation?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "nha-ccma-024",
+      "examId": "nha-ccma",
+      "subject": "Infection control",
+      "prompt": "A candidate repeatedly misses Infection control items while preparing for NHA CCMA. What remediation step is most useful?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Review missed-question rationales and group them by the underlying concept being tested."
+      ],
+      "answerIndex": 3,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Infection control.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "nha-ccma-025",
+      "examId": "nha-ccma",
+      "subject": "Phlebotomy",
+      "prompt": "During timed NHA CCMA practice, what is the best approach to a difficult Phlebotomy item?",
+      "options": [
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "nha-ccma-026",
+      "examId": "nha-ccma",
+      "subject": "EKG and cardiovascular testing",
+      "prompt": "A learner is starting NHA CCMA review for EKG and cardiovascular testing. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Build a checklist for ekg and cardiovascular testing that links the stem clues to the safest or most defensible next step.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "EKG and cardiovascular testing questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "nha-ccma-027",
+      "examId": "nha-ccma",
+      "subject": "Medication administration",
+      "prompt": "On a NHA CCMA practice set, a question about Medication administration includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Medication administration.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "nha-ccma-028",
+      "examId": "nha-ccma",
+      "subject": "Administrative assisting",
+      "prompt": "Which answer choice would be most consistent with strong NHA CCMA performance in Administrative assisting?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem."
+      ],
+      "answerIndex": 3,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "nha-ccma-029",
+      "examId": "nha-ccma",
+      "subject": "Communication and professionalism",
+      "prompt": "A candidate repeatedly misses Communication and professionalism items while preparing for NHA CCMA. What remediation step is most useful?",
+      "options": [
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Communication and professionalism.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "nha-ccma-030",
+      "examId": "nha-ccma",
+      "subject": "Medical law and ethics",
+      "prompt": "During timed NHA CCMA practice, what is the best approach to a difficult Medical law and ethics item?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "nha-ccma-031",
+      "examId": "nha-ccma",
+      "subject": "Foundational knowledge",
+      "prompt": "A learner is starting NHA CCMA review for Foundational knowledge. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Build a checklist for foundational knowledge that links the stem clues to the safest or most defensible next step.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "Foundational knowledge questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "nha-ccma-032",
+      "examId": "nha-ccma",
+      "subject": "Clinical patient care",
+      "prompt": "On a NHA CCMA practice set, a question about Clinical patient care includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Identify the command word and the highest-value clue before comparing the answer choices."
+      ],
+      "answerIndex": 3,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Clinical patient care.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "nha-ccma-033",
+      "examId": "nha-ccma",
+      "subject": "Patient intake and documentation",
+      "prompt": "Which answer choice would be most consistent with strong NHA CCMA performance in Patient intake and documentation?",
+      "options": [
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "nha-ccma-034",
+      "examId": "nha-ccma",
+      "subject": "Infection control",
+      "prompt": "A candidate repeatedly misses Infection control items while preparing for NHA CCMA. What remediation step is most useful?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Infection control.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "nha-ccma-035",
+      "examId": "nha-ccma",
+      "subject": "Phlebotomy",
+      "prompt": "During timed NHA CCMA practice, what is the best approach to a difficult Phlebotomy item?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "nha-ccma-036",
+      "examId": "nha-ccma",
+      "subject": "EKG and cardiovascular testing",
+      "prompt": "A learner is starting NHA CCMA review for EKG and cardiovascular testing. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Build a checklist for ekg and cardiovascular testing that links the stem clues to the safest or most defensible next step."
+      ],
+      "answerIndex": 3,
+      "explanation": "EKG and cardiovascular testing questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "nha-ccma-037",
+      "examId": "nha-ccma",
+      "subject": "Medication administration",
+      "prompt": "On a NHA CCMA practice set, a question about Medication administration includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Medication administration.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "nha-ccma-038",
+      "examId": "nha-ccma",
+      "subject": "Administrative assisting",
+      "prompt": "Which answer choice would be most consistent with strong NHA CCMA performance in Administrative assisting?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "nha-ccma-039",
+      "examId": "nha-ccma",
+      "subject": "Communication and professionalism",
+      "prompt": "A candidate repeatedly misses Communication and professionalism items while preparing for NHA CCMA. What remediation step is most useful?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Communication and professionalism.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "nha-ccma-040",
+      "examId": "nha-ccma",
+      "subject": "Medical law and ethics",
+      "prompt": "During timed NHA CCMA practice, what is the best approach to a difficult Medical law and ethics item?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows."
+      ],
+      "answerIndex": 3,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "nha-ccma-041",
+      "examId": "nha-ccma",
+      "subject": "Foundational knowledge",
+      "prompt": "A learner is starting NHA CCMA review for Foundational knowledge. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Build a checklist for foundational knowledge that links the stem clues to the safest or most defensible next step.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Foundational knowledge questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "nha-ccma-042",
+      "examId": "nha-ccma",
+      "subject": "Clinical patient care",
+      "prompt": "On a NHA CCMA practice set, a question about Clinical patient care includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Clinical patient care.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "nha-ccma-043",
+      "examId": "nha-ccma",
+      "subject": "Patient intake and documentation",
+      "prompt": "Which answer choice would be most consistent with strong NHA CCMA performance in Patient intake and documentation?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "nha-ccma-044",
+      "examId": "nha-ccma",
+      "subject": "Infection control",
+      "prompt": "A candidate repeatedly misses Infection control items while preparing for NHA CCMA. What remediation step is most useful?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Review missed-question rationales and group them by the underlying concept being tested."
+      ],
+      "answerIndex": 3,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Infection control.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "nha-ccma-045",
+      "examId": "nha-ccma",
+      "subject": "Phlebotomy",
+      "prompt": "During timed NHA CCMA practice, what is the best approach to a difficult Phlebotomy item?",
+      "options": [
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "nha-ccma-046",
+      "examId": "nha-ccma",
+      "subject": "EKG and cardiovascular testing",
+      "prompt": "A learner is starting NHA CCMA review for EKG and cardiovascular testing. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "Build a checklist for ekg and cardiovascular testing that links the stem clues to the safest or most defensible next step.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "EKG and cardiovascular testing questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "nha-ccma-047",
+      "examId": "nha-ccma",
+      "subject": "Medication administration",
+      "prompt": "On a NHA CCMA practice set, a question about Medication administration includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Medication administration.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "nha-ccma-048",
+      "examId": "nha-ccma",
+      "subject": "Administrative assisting",
+      "prompt": "Which answer choice would be most consistent with strong NHA CCMA performance in Administrative assisting?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem."
+      ],
+      "answerIndex": 3,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "nha-ccma-049",
+      "examId": "nha-ccma",
+      "subject": "Communication and professionalism",
+      "prompt": "A candidate repeatedly misses Communication and professionalism items while preparing for NHA CCMA. What remediation step is most useful?",
+      "options": [
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Communication and professionalism.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "nha-ccma-050",
+      "examId": "nha-ccma",
+      "subject": "Medical law and ethics",
+      "prompt": "During timed NHA CCMA practice, what is the best approach to a difficult Medical law and ethics item?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    }
+  ]
+}

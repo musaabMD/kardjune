@@ -1,10 +1,13 @@
 export type HqGoal = {
   name: string;
   label: string;
-  category: "Acquisition" | "Activation" | "Learning" | "Revenue" | "Retention" | "Quality";
+  category: HqGoalCategory;
   description: string;
   keep: boolean;
 };
+
+export const HQ_GOAL_CATEGORIES = ["Acquisition", "Activation", "Learning", "Revenue", "Retention", "Quality", "Operations", "Analytics"] as const;
+export type HqGoalCategory = (typeof HQ_GOAL_CATEGORIES)[number];
 
 export const DRKARD_GOALS: HqGoal[] = [
   {

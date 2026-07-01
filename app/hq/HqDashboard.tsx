@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { AgGridReact } from "ag-grid-react";
 import {
   AllCommunityModule,
@@ -31,6 +33,7 @@ import {
   TrendingUp,
   X,
   UserPlus,
+  ListTodo,
 } from "lucide-react";
 
 ModuleRegistry.registerModules([AllCommunityModule]);
@@ -109,6 +112,19 @@ type GridRow = Row & {
 
 type Assignee = "Unassigned" | "Mousab" | "Ops" | "Content" | "Support";
 type EditableField = string;
+type EditableQuestion = {
+  _id?: string;
+  id?: string;
+  examId?: string;
+  subject?: string;
+  prompt?: string;
+  question?: string;
+  options?: string[];
+  answerIndex?: number;
+  explanation?: string;
+  tags?: string[];
+  [key: string]: unknown;
+};
 
 const icons = {
   Activity,
@@ -183,6 +199,29 @@ function bulkOptionsFor(field: EditableField): string[] | null {
 
 function defaultBulkValue(field: EditableField) {
   return bulkOptionsFor(field)?.[0] ?? "";
+}
+
+function metricIdFromPath() {
+  if (typeof window === "undefined") return null;
+  const match = window.location.pathname.match(/^\/hq\/([^/]+)$/);
+  const id = match?.[1];
+  if (!id || id === "goals") return null;
+  return decodeURIComponent(id);
+}
+
+function normalizeQuestion(raw: unknown, examId: string): EditableQuestion {
+  const value = raw && typeof raw === "object" ? (raw as EditableQuestion) : {};
+  return {
+    ...value,
+    _id: typeof value._id === "string" ? value._id : typeof value.id === "string" ? value.id : `q_${Date.now().toString(36)}`,
+    examId: typeof value.examId === "string" ? value.examId : examId,
+    subject: typeof value.subject === "string" ? value.subject : "",
+    prompt: typeof value.prompt === "string" ? value.prompt : typeof value.question === "string" ? value.question : "",
+    options: Array.isArray(value.options) ? value.options.map((option) => String(option)) : ["", "", "", ""],
+    answerIndex: typeof value.answerIndex === "number" ? value.answerIndex : 0,
+    explanation: typeof value.explanation === "string" ? value.explanation : "",
+    tags: Array.isArray(value.tags) ? value.tags.map((tag) => String(tag)) : [],
+  };
 }
 
 const multiFilterParams = {
@@ -308,6 +347,7 @@ function DetailView({
   metric: HqMetric;
   onBack: () => void;
 }) {
+  const router = useRouter();
   const Icon = icons[metric.icon];
   const gridContainerRef = useRef<HTMLDivElement | null>(null);
   const [query, setQuery] = useState("");
@@ -324,8 +364,11 @@ function DetailView({
   const [qbankTitle, setQbankTitle] = useState("");
   const [qbankRole, setQbankRole] = useState("Exam");
   const [qbankJson, setQbankJson] = useState("");
+  const [qbankQuestions, setQbankQuestions] = useState<EditableQuestion[]>([]);
+  const [activeQuestionIndex, setActiveQuestionIndex] = useState(0);
   const [qbankMessage, setQbankMessage] = useState("");
   const [qbankSaving, setQbankSaving] = useState(false);
+  const [userSyncing, setUserSyncing] = useState(false);
   const bulkOptions = useMemo(() => bulkOptionsFor(bulkColumn), [bulkColumn]);
   const tableColumns = useMemo(() => metric.columns?.length ? metric.columns : defaultColumns, [metric.columns]);
   const editableFields = useMemo(
@@ -432,6 +475,8 @@ function DetailView({
     gridApi?.resetRowHeights();
   }, [gridApi, rowHeight]);
 
+  const activeQuestion = qbankQuestions[activeQuestionIndex] ?? null;
+
   const updateRows = (rows: GridRow[], field: EditableField, value: string) => {
     if (!rows.length) return;
     setEditedRows((current) => {
@@ -468,20 +513,107 @@ function DetailView({
     updateRows([event.data], field, String(event.newValue ?? ""));
   };
 
-  const loadSelectedQuestionBank = () => {
+  const loadSelectedQuestionBank = async () => {
     const selected = gridApi?.getSelectedRows()[0];
     if (!selected) return;
-    setQbankSlug(String(selected.slug ?? selected.period ?? ""));
-    setQbankTitle(String(selected.title ?? selected.value ?? ""));
-    setQbankRole(String(selected.role ?? selected.vsTarget ?? "Exam"));
-    setQbankMessage("Paste the updated questions JSON array, then save.");
+    const slug = String(selected.slug ?? selected.period ?? "");
+    const title = String(selected.title ?? selected.value ?? "");
+    const role = String(selected.role ?? selected.vsTarget ?? "Exam");
+    setQbankSlug(slug);
+    setQbankTitle(title);
+    setQbankRole(role);
+    setQbankSaving(true);
+    setQbankMessage("Loading question text from Cloudflare R2.");
+    try {
+      const res = await fetch(`/api/admin/qbanks?slug=${encodeURIComponent(slug)}`);
+      const data = (await res.json().catch(() => ({}))) as {
+        error?: string;
+        title?: string;
+        role?: string;
+        questions?: unknown[];
+      };
+      if (!res.ok || !Array.isArray(data.questions)) {
+        setQbankQuestions([]);
+        setQbankJson("");
+        setQbankMessage(data.error ?? "Could not load question bank.");
+        return;
+      }
+      const questions = data.questions.map((question) => normalizeQuestion(question, slug));
+      setQbankTitle(data.title ?? title);
+      setQbankRole(data.role ?? role);
+      setQbankQuestions(questions);
+      setActiveQuestionIndex(0);
+      setQbankJson(JSON.stringify({ questions }, null, 2));
+      setQbankMessage(`Loaded ${questions.length} questions. Edit fields below, then save.`);
+    } finally {
+      setQbankSaving(false);
+    }
+  };
+
+  const syncUsers = async () => {
+    setUserSyncing(true);
+    try {
+      const res = await fetch("/api/admin/users/sync", { method: "POST" });
+      const data = (await res.json().catch(() => ({}))) as { error?: string; synced?: number; total?: number };
+      if (!res.ok) {
+        setQbankMessage(data.error ?? "User sync failed.");
+        return;
+      }
+      setQbankMessage(`Synced ${data.synced ?? 0} Clerk users.`);
+      router.refresh();
+    } finally {
+      setUserSyncing(false);
+    }
+  };
+
+  const updateQuestion = (index: number, patch: Partial<EditableQuestion>) => {
+    setQbankQuestions((current) => {
+      const next = current.map((question, questionIndex) => (questionIndex === index ? { ...question, ...patch } : question));
+      setQbankJson(JSON.stringify({ questions: next }, null, 2));
+      return next;
+    });
+  };
+
+  const updateQuestionOption = (index: number, optionIndex: number, value: string) => {
+    const question = qbankQuestions[index];
+    if (!question) return;
+    const options = [...(question.options ?? [])];
+    options[optionIndex] = value;
+    updateQuestion(index, { options });
+  };
+
+  const addQuestion = () => {
+    const next = normalizeQuestion(
+      {
+        _id: `${qbankSlug || "exam"}-${String(qbankQuestions.length + 1).padStart(3, "0")}`,
+        subject: "",
+        prompt: "",
+        options: ["", "", "", ""],
+        answerIndex: 0,
+        explanation: "",
+        tags: [],
+      },
+      qbankSlug,
+    );
+    const questions = [...qbankQuestions, next];
+    setQbankQuestions(questions);
+    setActiveQuestionIndex(questions.length - 1);
+    setQbankJson(JSON.stringify({ questions }, null, 2));
+  };
+
+  const removeQuestion = () => {
+    if (!qbankQuestions.length) return;
+    const questions = qbankQuestions.filter((_question, index) => index !== activeQuestionIndex);
+    setQbankQuestions(questions);
+    setActiveQuestionIndex(Math.max(0, activeQuestionIndex - 1));
+    setQbankJson(JSON.stringify({ questions }, null, 2));
   };
 
   const saveQuestionBank = async () => {
     setQbankMessage("");
     setQbankSaving(true);
     try {
-      const parsed = JSON.parse(qbankJson);
+      const parsed = qbankQuestions.length ? { questions: qbankQuestions } : JSON.parse(qbankJson);
       const questions = Array.isArray(parsed) ? parsed : parsed?.questions;
       if (!Array.isArray(questions)) {
         setQbankMessage("Questions JSON must be an array or { questions: [...] }.");
@@ -573,6 +705,17 @@ function DetailView({
       </div>
 
       <div className="flex flex-none flex-wrap items-center gap-2 border-b border-slate-300 bg-white px-4 py-2 shadow-sm sm:px-6 lg:px-8">
+        {metric.id === "users" && (
+          <button
+            type="button"
+            onClick={syncUsers}
+            disabled={userSyncing}
+            className="h-9 rounded-lg bg-blue-600 px-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-40 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+          >
+            {userSyncing ? "Syncing users" : "Sync Clerk users"}
+          </button>
+        )}
+        {metric.id !== "question-bank" && qbankMessage && <span className="text-sm font-semibold text-slate-500">{qbankMessage}</span>}
         <button
           type="button"
           onClick={() => gridApi?.selectAll("filtered")}
@@ -680,7 +823,7 @@ function DetailView({
             <span className="text-sm font-extrabold uppercase text-slate-500">Question bank updater</span>
             <button
               type="button"
-              onClick={loadSelectedQuestionBank}
+              onClick={() => void loadSelectedQuestionBank()}
               disabled={!selectedCount}
               className="h-9 rounded-lg border border-slate-300 bg-white px-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:border-slate-400 disabled:cursor-not-allowed disabled:opacity-40"
             >
@@ -710,7 +853,7 @@ function DetailView({
             <input
               value={qbankJson}
               onChange={(event) => setQbankJson(event.target.value)}
-              placeholder='Paste questions JSON: [{"_id":"q1","prompt":"...","options":[...],"answerIndex":0}]'
+              placeholder='Raw JSON fallback: {"questions":[...]}'
               className="h-10 min-w-0 rounded-lg border border-slate-300 bg-white px-3 text-sm font-semibold text-slate-800 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
             />
             <button
@@ -722,6 +865,90 @@ function DetailView({
               {qbankSaving ? "Saving" : "Save to Cloudflare"}
             </button>
           </div>
+          {activeQuestion && (
+            <div className="grid gap-3 rounded-xl border border-slate-200 bg-white p-3 shadow-sm xl:grid-cols-[18rem_1fr_24rem]">
+              <div className="space-y-2">
+                <div className="grid grid-cols-[1fr_auto_auto] gap-2">
+                  <select
+                    value={activeQuestionIndex}
+                    onChange={(event) => setActiveQuestionIndex(Number(event.target.value))}
+                    className="h-10 rounded-lg border border-slate-300 bg-white px-3 text-sm font-bold text-slate-800 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
+                    aria-label="Question"
+                  >
+                    {qbankQuestions.map((question, index) => (
+                      <option key={`${question._id ?? index}`} value={index}>
+                        {index + 1}. {String(question._id ?? question.id ?? "Question")}
+                      </option>
+                    ))}
+                  </select>
+                  <button type="button" onClick={addQuestion} className="h-10 rounded-lg bg-blue-600 px-3 text-sm font-bold text-white">
+                    Add
+                  </button>
+                  <button type="button" onClick={removeQuestion} className="h-10 rounded-lg border border-rose-200 px-3 text-sm font-bold text-rose-600">
+                    Delete
+                  </button>
+                </div>
+                <input
+                  value={activeQuestion._id ?? ""}
+                  onChange={(event) => updateQuestion(activeQuestionIndex, { _id: event.target.value })}
+                  placeholder="Question ID"
+                  className="h-10 w-full rounded-lg border border-slate-300 bg-white px-3 text-sm font-semibold text-slate-800 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
+                />
+                <input
+                  value={activeQuestion.subject ?? ""}
+                  onChange={(event) => updateQuestion(activeQuestionIndex, { subject: event.target.value })}
+                  placeholder="Subject"
+                  className="h-10 w-full rounded-lg border border-slate-300 bg-white px-3 text-sm font-semibold text-slate-800 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
+                />
+                <input
+                  value={(activeQuestion.tags ?? []).join(", ")}
+                  onChange={(event) => updateQuestion(activeQuestionIndex, { tags: event.target.value.split(",").map((tag) => tag.trim()).filter(Boolean) })}
+                  placeholder="Tags, comma separated"
+                  className="h-10 w-full rounded-lg border border-slate-300 bg-white px-3 text-sm font-semibold text-slate-800 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
+                />
+              </div>
+              <div className="space-y-2">
+                <textarea
+                  value={activeQuestion.prompt ?? ""}
+                  onChange={(event) => updateQuestion(activeQuestionIndex, { prompt: event.target.value })}
+                  placeholder="Question prompt"
+                  className="min-h-32 w-full resize-y rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-800 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
+                />
+                <textarea
+                  value={activeQuestion.explanation ?? ""}
+                  onChange={(event) => updateQuestion(activeQuestionIndex, { explanation: event.target.value })}
+                  placeholder="Explanation"
+                  className="min-h-24 w-full resize-y rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-800 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
+                />
+              </div>
+              <div className="space-y-2">
+                {(activeQuestion.options ?? ["", "", "", ""]).map((option, index) => (
+                  <div key={index} className="grid grid-cols-[2rem_1fr] items-center gap-2">
+                    <span className="text-center text-sm font-extrabold text-slate-500">{String.fromCharCode(65 + index)}</span>
+                    <input
+                      value={option}
+                      onChange={(event) => updateQuestionOption(activeQuestionIndex, index, event.target.value)}
+                      className="h-10 w-full rounded-lg border border-slate-300 bg-white px-3 text-sm font-semibold text-slate-800 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
+                    />
+                  </div>
+                ))}
+                <label className="grid grid-cols-[8rem_1fr] items-center gap-2 text-sm font-bold text-slate-600">
+                  Correct answer
+                  <select
+                    value={activeQuestion.answerIndex ?? 0}
+                    onChange={(event) => updateQuestion(activeQuestionIndex, { answerIndex: Number(event.target.value) })}
+                    className="h-10 rounded-lg border border-slate-300 bg-white px-3 text-sm font-bold text-slate-800 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
+                  >
+                    {(activeQuestion.options ?? ["", "", "", ""]).map((_option, index) => (
+                      <option key={index} value={index}>
+                        {String.fromCharCode(65 + index)}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              </div>
+            </div>
+          )}
         </div>
       )}
 
@@ -783,6 +1010,26 @@ export default function HqDashboard({ metrics }: { metrics: HqMetric[] }) {
 
   const tabs = useMemo(() => ["All", ...Array.from(new Set(metrics.map((metric) => metric.category)))], [metrics]);
   const selected = metrics.find((metric) => metric.id === selectedId) || null;
+
+  useEffect(() => {
+    const syncSelectedFromPath = () => {
+      const next = metricIdFromPath();
+      setSelectedId(next && metrics.some((metric) => metric.id === next) ? next : null);
+    };
+    syncSelectedFromPath();
+    window.addEventListener("popstate", syncSelectedFromPath);
+    return () => window.removeEventListener("popstate", syncSelectedFromPath);
+  }, [metrics]);
+
+  const openMetric = (metricId: string) => {
+    window.history.pushState(null, "", `/hq/${encodeURIComponent(metricId)}`);
+    setSelectedId(metricId);
+  };
+
+  const closeMetric = () => {
+    window.history.pushState(null, "", "/hq");
+    setSelectedId(null);
+  };
 
   const filtered = useMemo(() => {
     return metrics.filter((metric) => {
@@ -865,6 +1112,20 @@ export default function HqDashboard({ metrics }: { metrics: HqMetric[] }) {
               />
             </div>
             <div className="flex shrink-0 flex-wrap gap-2">
+              <Link
+                href="/lst"
+                className="inline-flex shrink-0 items-center gap-2 rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-600 transition hover:border-slate-400 hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+              >
+                <ListTodo className="h-4 w-4" />
+                LST
+              </Link>
+              <Link
+                href="/hq/goals"
+                className="inline-flex shrink-0 items-center gap-2 rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-600 transition hover:border-slate-400 hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+              >
+                <TargetIcon className="h-4 w-4" />
+                Goals
+              </Link>
               {tabs.map((tab) => {
                 const active = tab === activeTab;
                 return (
@@ -890,13 +1151,13 @@ export default function HqDashboard({ metrics }: { metrics: HqMetric[] }) {
 
       <div className={selected ? "w-full" : "w-full px-4 py-4 sm:px-6 lg:px-8"}>
         {selected ? (
-          <DetailView metric={selected} onBack={() => setSelectedId(null)} />
+          <DetailView metric={selected} onBack={closeMetric} />
         ) : (
           <>
             {filtered.length > 0 ? (
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5">
                 {filtered.map((metric) => (
-                  <MetricCard key={metric.id} metric={metric} onClick={() => setSelectedId(metric.id)} />
+                  <MetricCard key={metric.id} metric={metric} onClick={() => openMetric(metric.id)} />
                 ))}
               </div>
             ) : (

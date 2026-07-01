@@ -1,0 +1,904 @@
+{
+  "questions": [
+    {
+      "_id": "nremt-paramedic-001",
+      "examId": "nremt-paramedic",
+      "subject": "Advanced airway management",
+      "prompt": "A learner is starting NREMT Paramedic review for Advanced airway management. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Build a checklist for advanced airway management that links the stem clues to the safest or most defensible next step.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Advanced airway management questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-002",
+      "examId": "nremt-paramedic",
+      "subject": "Cardiology and ECG interpretation",
+      "prompt": "On a NREMT Paramedic practice set, a question about Cardiology and ECG interpretation includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Cardiology and ECG interpretation.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-003",
+      "examId": "nremt-paramedic",
+      "subject": "Pharmacology and medication math",
+      "prompt": "Which answer choice would be most consistent with strong NREMT Paramedic performance in Pharmacology and medication math?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-004",
+      "examId": "nremt-paramedic",
+      "subject": "Trauma management",
+      "prompt": "A candidate repeatedly misses Trauma management items while preparing for NREMT Paramedic. What remediation step is most useful?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Review missed-question rationales and group them by the underlying concept being tested."
+      ],
+      "answerIndex": 3,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Trauma management.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-005",
+      "examId": "nremt-paramedic",
+      "subject": "Medical assessment",
+      "prompt": "During timed NREMT Paramedic practice, what is the best approach to a difficult Medical assessment item?",
+      "options": [
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-006",
+      "examId": "nremt-paramedic",
+      "subject": "Obstetrics and pediatrics",
+      "prompt": "A learner is starting NREMT Paramedic review for Obstetrics and pediatrics. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "Build a checklist for obstetrics and pediatrics that links the stem clues to the safest or most defensible next step.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "Obstetrics and pediatrics questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-007",
+      "examId": "nremt-paramedic",
+      "subject": "EMS operations",
+      "prompt": "On a NREMT Paramedic practice set, a question about EMS operations includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in EMS operations.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-008",
+      "examId": "nremt-paramedic",
+      "subject": "Shock and critical care",
+      "prompt": "Which answer choice would be most consistent with strong NREMT Paramedic performance in Shock and critical care?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem."
+      ],
+      "answerIndex": 3,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-009",
+      "examId": "nremt-paramedic",
+      "subject": "Special patient populations",
+      "prompt": "A candidate repeatedly misses Special patient populations items while preparing for NREMT Paramedic. What remediation step is most useful?",
+      "options": [
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Special patient populations.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-010",
+      "examId": "nremt-paramedic",
+      "subject": "Clinical decision-making",
+      "prompt": "During timed NREMT Paramedic practice, what is the best approach to a difficult Clinical decision-making item?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-011",
+      "examId": "nremt-paramedic",
+      "subject": "Advanced airway management",
+      "prompt": "A learner is starting NREMT Paramedic review for Advanced airway management. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Build a checklist for advanced airway management that links the stem clues to the safest or most defensible next step.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "Advanced airway management questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-012",
+      "examId": "nremt-paramedic",
+      "subject": "Cardiology and ECG interpretation",
+      "prompt": "On a NREMT Paramedic practice set, a question about Cardiology and ECG interpretation includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Identify the command word and the highest-value clue before comparing the answer choices."
+      ],
+      "answerIndex": 3,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Cardiology and ECG interpretation.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-013",
+      "examId": "nremt-paramedic",
+      "subject": "Pharmacology and medication math",
+      "prompt": "Which answer choice would be most consistent with strong NREMT Paramedic performance in Pharmacology and medication math?",
+      "options": [
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-014",
+      "examId": "nremt-paramedic",
+      "subject": "Trauma management",
+      "prompt": "A candidate repeatedly misses Trauma management items while preparing for NREMT Paramedic. What remediation step is most useful?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Trauma management.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-015",
+      "examId": "nremt-paramedic",
+      "subject": "Medical assessment",
+      "prompt": "During timed NREMT Paramedic practice, what is the best approach to a difficult Medical assessment item?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-016",
+      "examId": "nremt-paramedic",
+      "subject": "Obstetrics and pediatrics",
+      "prompt": "A learner is starting NREMT Paramedic review for Obstetrics and pediatrics. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Build a checklist for obstetrics and pediatrics that links the stem clues to the safest or most defensible next step."
+      ],
+      "answerIndex": 3,
+      "explanation": "Obstetrics and pediatrics questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-017",
+      "examId": "nremt-paramedic",
+      "subject": "EMS operations",
+      "prompt": "On a NREMT Paramedic practice set, a question about EMS operations includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in EMS operations.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-018",
+      "examId": "nremt-paramedic",
+      "subject": "Shock and critical care",
+      "prompt": "Which answer choice would be most consistent with strong NREMT Paramedic performance in Shock and critical care?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-019",
+      "examId": "nremt-paramedic",
+      "subject": "Special patient populations",
+      "prompt": "A candidate repeatedly misses Special patient populations items while preparing for NREMT Paramedic. What remediation step is most useful?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Special patient populations.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-020",
+      "examId": "nremt-paramedic",
+      "subject": "Clinical decision-making",
+      "prompt": "During timed NREMT Paramedic practice, what is the best approach to a difficult Clinical decision-making item?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows."
+      ],
+      "answerIndex": 3,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-021",
+      "examId": "nremt-paramedic",
+      "subject": "Advanced airway management",
+      "prompt": "A learner is starting NREMT Paramedic review for Advanced airway management. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Build a checklist for advanced airway management that links the stem clues to the safest or most defensible next step.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "Advanced airway management questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-022",
+      "examId": "nremt-paramedic",
+      "subject": "Cardiology and ECG interpretation",
+      "prompt": "On a NREMT Paramedic practice set, a question about Cardiology and ECG interpretation includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Cardiology and ECG interpretation.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-023",
+      "examId": "nremt-paramedic",
+      "subject": "Pharmacology and medication math",
+      "prompt": "Which answer choice would be most consistent with strong NREMT Paramedic performance in Pharmacology and medication math?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-024",
+      "examId": "nremt-paramedic",
+      "subject": "Trauma management",
+      "prompt": "A candidate repeatedly misses Trauma management items while preparing for NREMT Paramedic. What remediation step is most useful?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Review missed-question rationales and group them by the underlying concept being tested."
+      ],
+      "answerIndex": 3,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Trauma management.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-025",
+      "examId": "nremt-paramedic",
+      "subject": "Medical assessment",
+      "prompt": "During timed NREMT Paramedic practice, what is the best approach to a difficult Medical assessment item?",
+      "options": [
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-026",
+      "examId": "nremt-paramedic",
+      "subject": "Obstetrics and pediatrics",
+      "prompt": "A learner is starting NREMT Paramedic review for Obstetrics and pediatrics. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Build a checklist for obstetrics and pediatrics that links the stem clues to the safest or most defensible next step.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "Obstetrics and pediatrics questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-027",
+      "examId": "nremt-paramedic",
+      "subject": "EMS operations",
+      "prompt": "On a NREMT Paramedic practice set, a question about EMS operations includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in EMS operations.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-028",
+      "examId": "nremt-paramedic",
+      "subject": "Shock and critical care",
+      "prompt": "Which answer choice would be most consistent with strong NREMT Paramedic performance in Shock and critical care?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem."
+      ],
+      "answerIndex": 3,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-029",
+      "examId": "nremt-paramedic",
+      "subject": "Special patient populations",
+      "prompt": "A candidate repeatedly misses Special patient populations items while preparing for NREMT Paramedic. What remediation step is most useful?",
+      "options": [
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Special patient populations.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-030",
+      "examId": "nremt-paramedic",
+      "subject": "Clinical decision-making",
+      "prompt": "During timed NREMT Paramedic practice, what is the best approach to a difficult Clinical decision-making item?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-031",
+      "examId": "nremt-paramedic",
+      "subject": "Advanced airway management",
+      "prompt": "A learner is starting NREMT Paramedic review for Advanced airway management. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Build a checklist for advanced airway management that links the stem clues to the safest or most defensible next step.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "Advanced airway management questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-032",
+      "examId": "nremt-paramedic",
+      "subject": "Cardiology and ECG interpretation",
+      "prompt": "On a NREMT Paramedic practice set, a question about Cardiology and ECG interpretation includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Identify the command word and the highest-value clue before comparing the answer choices."
+      ],
+      "answerIndex": 3,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Cardiology and ECG interpretation.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-033",
+      "examId": "nremt-paramedic",
+      "subject": "Pharmacology and medication math",
+      "prompt": "Which answer choice would be most consistent with strong NREMT Paramedic performance in Pharmacology and medication math?",
+      "options": [
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-034",
+      "examId": "nremt-paramedic",
+      "subject": "Trauma management",
+      "prompt": "A candidate repeatedly misses Trauma management items while preparing for NREMT Paramedic. What remediation step is most useful?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Trauma management.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-035",
+      "examId": "nremt-paramedic",
+      "subject": "Medical assessment",
+      "prompt": "During timed NREMT Paramedic practice, what is the best approach to a difficult Medical assessment item?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-036",
+      "examId": "nremt-paramedic",
+      "subject": "Obstetrics and pediatrics",
+      "prompt": "A learner is starting NREMT Paramedic review for Obstetrics and pediatrics. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Build a checklist for obstetrics and pediatrics that links the stem clues to the safest or most defensible next step."
+      ],
+      "answerIndex": 3,
+      "explanation": "Obstetrics and pediatrics questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-037",
+      "examId": "nremt-paramedic",
+      "subject": "EMS operations",
+      "prompt": "On a NREMT Paramedic practice set, a question about EMS operations includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in EMS operations.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-038",
+      "examId": "nremt-paramedic",
+      "subject": "Shock and critical care",
+      "prompt": "Which answer choice would be most consistent with strong NREMT Paramedic performance in Shock and critical care?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-039",
+      "examId": "nremt-paramedic",
+      "subject": "Special patient populations",
+      "prompt": "A candidate repeatedly misses Special patient populations items while preparing for NREMT Paramedic. What remediation step is most useful?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Special patient populations.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-040",
+      "examId": "nremt-paramedic",
+      "subject": "Clinical decision-making",
+      "prompt": "During timed NREMT Paramedic practice, what is the best approach to a difficult Clinical decision-making item?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows."
+      ],
+      "answerIndex": 3,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-041",
+      "examId": "nremt-paramedic",
+      "subject": "Advanced airway management",
+      "prompt": "A learner is starting NREMT Paramedic review for Advanced airway management. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Build a checklist for advanced airway management that links the stem clues to the safest or most defensible next step.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Advanced airway management questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-042",
+      "examId": "nremt-paramedic",
+      "subject": "Cardiology and ECG interpretation",
+      "prompt": "On a NREMT Paramedic practice set, a question about Cardiology and ECG interpretation includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Cardiology and ECG interpretation.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-043",
+      "examId": "nremt-paramedic",
+      "subject": "Pharmacology and medication math",
+      "prompt": "Which answer choice would be most consistent with strong NREMT Paramedic performance in Pharmacology and medication math?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-044",
+      "examId": "nremt-paramedic",
+      "subject": "Trauma management",
+      "prompt": "A candidate repeatedly misses Trauma management items while preparing for NREMT Paramedic. What remediation step is most useful?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Review missed-question rationales and group them by the underlying concept being tested."
+      ],
+      "answerIndex": 3,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Trauma management.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-045",
+      "examId": "nremt-paramedic",
+      "subject": "Medical assessment",
+      "prompt": "During timed NREMT Paramedic practice, what is the best approach to a difficult Medical assessment item?",
+      "options": [
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-046",
+      "examId": "nremt-paramedic",
+      "subject": "Obstetrics and pediatrics",
+      "prompt": "A learner is starting NREMT Paramedic review for Obstetrics and pediatrics. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "Build a checklist for obstetrics and pediatrics that links the stem clues to the safest or most defensible next step.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "Obstetrics and pediatrics questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-047",
+      "examId": "nremt-paramedic",
+      "subject": "EMS operations",
+      "prompt": "On a NREMT Paramedic practice set, a question about EMS operations includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in EMS operations.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-048",
+      "examId": "nremt-paramedic",
+      "subject": "Shock and critical care",
+      "prompt": "Which answer choice would be most consistent with strong NREMT Paramedic performance in Shock and critical care?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem."
+      ],
+      "answerIndex": 3,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-049",
+      "examId": "nremt-paramedic",
+      "subject": "Special patient populations",
+      "prompt": "A candidate repeatedly misses Special patient populations items while preparing for NREMT Paramedic. What remediation step is most useful?",
+      "options": [
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Special patient populations.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "nremt-paramedic-050",
+      "examId": "nremt-paramedic",
+      "subject": "Clinical decision-making",
+      "prompt": "During timed NREMT Paramedic practice, what is the best approach to a difficult Clinical decision-making item?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    }
+  ]
+}

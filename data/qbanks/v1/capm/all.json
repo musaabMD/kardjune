@@ -1,0 +1,904 @@
+{
+  "questions": [
+    {
+      "_id": "capm-001",
+      "examId": "capm",
+      "subject": "Project management fundamentals",
+      "prompt": "A learner is starting CAPM review for Project management fundamentals. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Build a checklist for project management fundamentals that links the stem clues to the safest or most defensible next step.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Project management fundamentals questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "capm-002",
+      "examId": "capm",
+      "subject": "Predictive methodologies",
+      "prompt": "On a CAPM practice set, a question about Predictive methodologies includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Predictive methodologies.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "capm-003",
+      "examId": "capm",
+      "subject": "Agile frameworks",
+      "prompt": "Which answer choice would be most consistent with strong CAPM performance in Agile frameworks?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "capm-004",
+      "examId": "capm",
+      "subject": "Business analysis",
+      "prompt": "A candidate repeatedly misses Business analysis items while preparing for CAPM. What remediation step is most useful?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Review missed-question rationales and group them by the underlying concept being tested."
+      ],
+      "answerIndex": 3,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Business analysis.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "capm-005",
+      "examId": "capm",
+      "subject": "Scope and requirements",
+      "prompt": "During timed CAPM practice, what is the best approach to a difficult Scope and requirements item?",
+      "options": [
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "capm-006",
+      "examId": "capm",
+      "subject": "Schedule basics",
+      "prompt": "A learner is starting CAPM review for Schedule basics. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "Build a checklist for schedule basics that links the stem clues to the safest or most defensible next step.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "Schedule basics questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "capm-007",
+      "examId": "capm",
+      "subject": "Cost and quality basics",
+      "prompt": "On a CAPM practice set, a question about Cost and quality basics includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Cost and quality basics.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "capm-008",
+      "examId": "capm",
+      "subject": "Risk and issue management",
+      "prompt": "Which answer choice would be most consistent with strong CAPM performance in Risk and issue management?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem."
+      ],
+      "answerIndex": 3,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "capm-009",
+      "examId": "capm",
+      "subject": "Stakeholder communication",
+      "prompt": "A candidate repeatedly misses Stakeholder communication items while preparing for CAPM. What remediation step is most useful?",
+      "options": [
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Stakeholder communication.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "capm-010",
+      "examId": "capm",
+      "subject": "Project integration",
+      "prompt": "During timed CAPM practice, what is the best approach to a difficult Project integration item?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "capm-011",
+      "examId": "capm",
+      "subject": "Project management fundamentals",
+      "prompt": "A learner is starting CAPM review for Project management fundamentals. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Build a checklist for project management fundamentals that links the stem clues to the safest or most defensible next step.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "Project management fundamentals questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "capm-012",
+      "examId": "capm",
+      "subject": "Predictive methodologies",
+      "prompt": "On a CAPM practice set, a question about Predictive methodologies includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Identify the command word and the highest-value clue before comparing the answer choices."
+      ],
+      "answerIndex": 3,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Predictive methodologies.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "capm-013",
+      "examId": "capm",
+      "subject": "Agile frameworks",
+      "prompt": "Which answer choice would be most consistent with strong CAPM performance in Agile frameworks?",
+      "options": [
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "capm-014",
+      "examId": "capm",
+      "subject": "Business analysis",
+      "prompt": "A candidate repeatedly misses Business analysis items while preparing for CAPM. What remediation step is most useful?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Business analysis.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "capm-015",
+      "examId": "capm",
+      "subject": "Scope and requirements",
+      "prompt": "During timed CAPM practice, what is the best approach to a difficult Scope and requirements item?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "capm-016",
+      "examId": "capm",
+      "subject": "Schedule basics",
+      "prompt": "A learner is starting CAPM review for Schedule basics. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Build a checklist for schedule basics that links the stem clues to the safest or most defensible next step."
+      ],
+      "answerIndex": 3,
+      "explanation": "Schedule basics questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "capm-017",
+      "examId": "capm",
+      "subject": "Cost and quality basics",
+      "prompt": "On a CAPM practice set, a question about Cost and quality basics includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Cost and quality basics.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "capm-018",
+      "examId": "capm",
+      "subject": "Risk and issue management",
+      "prompt": "Which answer choice would be most consistent with strong CAPM performance in Risk and issue management?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "capm-019",
+      "examId": "capm",
+      "subject": "Stakeholder communication",
+      "prompt": "A candidate repeatedly misses Stakeholder communication items while preparing for CAPM. What remediation step is most useful?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Stakeholder communication.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "capm-020",
+      "examId": "capm",
+      "subject": "Project integration",
+      "prompt": "During timed CAPM practice, what is the best approach to a difficult Project integration item?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows."
+      ],
+      "answerIndex": 3,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "capm-021",
+      "examId": "capm",
+      "subject": "Project management fundamentals",
+      "prompt": "A learner is starting CAPM review for Project management fundamentals. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Build a checklist for project management fundamentals that links the stem clues to the safest or most defensible next step.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "Project management fundamentals questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "capm-022",
+      "examId": "capm",
+      "subject": "Predictive methodologies",
+      "prompt": "On a CAPM practice set, a question about Predictive methodologies includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Predictive methodologies.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "capm-023",
+      "examId": "capm",
+      "subject": "Agile frameworks",
+      "prompt": "Which answer choice would be most consistent with strong CAPM performance in Agile frameworks?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "capm-024",
+      "examId": "capm",
+      "subject": "Business analysis",
+      "prompt": "A candidate repeatedly misses Business analysis items while preparing for CAPM. What remediation step is most useful?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Review missed-question rationales and group them by the underlying concept being tested."
+      ],
+      "answerIndex": 3,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Business analysis.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "capm-025",
+      "examId": "capm",
+      "subject": "Scope and requirements",
+      "prompt": "During timed CAPM practice, what is the best approach to a difficult Scope and requirements item?",
+      "options": [
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "capm-026",
+      "examId": "capm",
+      "subject": "Schedule basics",
+      "prompt": "A learner is starting CAPM review for Schedule basics. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Build a checklist for schedule basics that links the stem clues to the safest or most defensible next step.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "Schedule basics questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "capm-027",
+      "examId": "capm",
+      "subject": "Cost and quality basics",
+      "prompt": "On a CAPM practice set, a question about Cost and quality basics includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Cost and quality basics.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "capm-028",
+      "examId": "capm",
+      "subject": "Risk and issue management",
+      "prompt": "Which answer choice would be most consistent with strong CAPM performance in Risk and issue management?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem."
+      ],
+      "answerIndex": 3,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "capm-029",
+      "examId": "capm",
+      "subject": "Stakeholder communication",
+      "prompt": "A candidate repeatedly misses Stakeholder communication items while preparing for CAPM. What remediation step is most useful?",
+      "options": [
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Stakeholder communication.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "capm-030",
+      "examId": "capm",
+      "subject": "Project integration",
+      "prompt": "During timed CAPM practice, what is the best approach to a difficult Project integration item?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "capm-031",
+      "examId": "capm",
+      "subject": "Project management fundamentals",
+      "prompt": "A learner is starting CAPM review for Project management fundamentals. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Build a checklist for project management fundamentals that links the stem clues to the safest or most defensible next step.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "Project management fundamentals questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "capm-032",
+      "examId": "capm",
+      "subject": "Predictive methodologies",
+      "prompt": "On a CAPM practice set, a question about Predictive methodologies includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Identify the command word and the highest-value clue before comparing the answer choices."
+      ],
+      "answerIndex": 3,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Predictive methodologies.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "capm-033",
+      "examId": "capm",
+      "subject": "Agile frameworks",
+      "prompt": "Which answer choice would be most consistent with strong CAPM performance in Agile frameworks?",
+      "options": [
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "capm-034",
+      "examId": "capm",
+      "subject": "Business analysis",
+      "prompt": "A candidate repeatedly misses Business analysis items while preparing for CAPM. What remediation step is most useful?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Business analysis.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "capm-035",
+      "examId": "capm",
+      "subject": "Scope and requirements",
+      "prompt": "During timed CAPM practice, what is the best approach to a difficult Scope and requirements item?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "capm-036",
+      "examId": "capm",
+      "subject": "Schedule basics",
+      "prompt": "A learner is starting CAPM review for Schedule basics. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Build a checklist for schedule basics that links the stem clues to the safest or most defensible next step."
+      ],
+      "answerIndex": 3,
+      "explanation": "Schedule basics questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "capm-037",
+      "examId": "capm",
+      "subject": "Cost and quality basics",
+      "prompt": "On a CAPM practice set, a question about Cost and quality basics includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Cost and quality basics.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "capm-038",
+      "examId": "capm",
+      "subject": "Risk and issue management",
+      "prompt": "Which answer choice would be most consistent with strong CAPM performance in Risk and issue management?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "capm-039",
+      "examId": "capm",
+      "subject": "Stakeholder communication",
+      "prompt": "A candidate repeatedly misses Stakeholder communication items while preparing for CAPM. What remediation step is most useful?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Stakeholder communication.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "capm-040",
+      "examId": "capm",
+      "subject": "Project integration",
+      "prompt": "During timed CAPM practice, what is the best approach to a difficult Project integration item?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows."
+      ],
+      "answerIndex": 3,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "capm-041",
+      "examId": "capm",
+      "subject": "Project management fundamentals",
+      "prompt": "A learner is starting CAPM review for Project management fundamentals. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Build a checklist for project management fundamentals that links the stem clues to the safest or most defensible next step.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Project management fundamentals questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "capm-042",
+      "examId": "capm",
+      "subject": "Predictive methodologies",
+      "prompt": "On a CAPM practice set, a question about Predictive methodologies includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Predictive methodologies.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "capm-043",
+      "examId": "capm",
+      "subject": "Agile frameworks",
+      "prompt": "Which answer choice would be most consistent with strong CAPM performance in Agile frameworks?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "capm-044",
+      "examId": "capm",
+      "subject": "Business analysis",
+      "prompt": "A candidate repeatedly misses Business analysis items while preparing for CAPM. What remediation step is most useful?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Review missed-question rationales and group them by the underlying concept being tested."
+      ],
+      "answerIndex": 3,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Business analysis.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "capm-045",
+      "examId": "capm",
+      "subject": "Scope and requirements",
+      "prompt": "During timed CAPM practice, what is the best approach to a difficult Scope and requirements item?",
+      "options": [
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "capm-046",
+      "examId": "capm",
+      "subject": "Schedule basics",
+      "prompt": "A learner is starting CAPM review for Schedule basics. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "Build a checklist for schedule basics that links the stem clues to the safest or most defensible next step.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "Schedule basics questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "capm-047",
+      "examId": "capm",
+      "subject": "Cost and quality basics",
+      "prompt": "On a CAPM practice set, a question about Cost and quality basics includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Cost and quality basics.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "capm-048",
+      "examId": "capm",
+      "subject": "Risk and issue management",
+      "prompt": "Which answer choice would be most consistent with strong CAPM performance in Risk and issue management?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem."
+      ],
+      "answerIndex": 3,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "capm-049",
+      "examId": "capm",
+      "subject": "Stakeholder communication",
+      "prompt": "A candidate repeatedly misses Stakeholder communication items while preparing for CAPM. What remediation step is most useful?",
+      "options": [
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Stakeholder communication.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "capm-050",
+      "examId": "capm",
+      "subject": "Project integration",
+      "prompt": "During timed CAPM practice, what is the best approach to a difficult Project integration item?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    }
+  ]
+}

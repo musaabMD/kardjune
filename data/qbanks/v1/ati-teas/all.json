@@ -1,0 +1,904 @@
+{
+  "questions": [
+    {
+      "_id": "ati-teas-001",
+      "examId": "ati-teas",
+      "subject": "Reading key ideas",
+      "prompt": "A learner is starting ATI TEAS review for Reading key ideas. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Build a checklist for reading key ideas that links the stem clues to the safest or most defensible next step.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Reading key ideas questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "ati-teas-002",
+      "examId": "ati-teas",
+      "subject": "Reading craft and structure",
+      "prompt": "On a ATI TEAS practice set, a question about Reading craft and structure includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Reading craft and structure.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "ati-teas-003",
+      "examId": "ati-teas",
+      "subject": "Mathematics numbers and algebra",
+      "prompt": "Which answer choice would be most consistent with strong ATI TEAS performance in Mathematics numbers and algebra?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "ati-teas-004",
+      "examId": "ati-teas",
+      "subject": "Measurement and data",
+      "prompt": "A candidate repeatedly misses Measurement and data items while preparing for ATI TEAS. What remediation step is most useful?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Review missed-question rationales and group them by the underlying concept being tested."
+      ],
+      "answerIndex": 3,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Measurement and data.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "ati-teas-005",
+      "examId": "ati-teas",
+      "subject": "Human anatomy and physiology",
+      "prompt": "During timed ATI TEAS practice, what is the best approach to a difficult Human anatomy and physiology item?",
+      "options": [
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "ati-teas-006",
+      "examId": "ati-teas",
+      "subject": "Life and physical sciences",
+      "prompt": "A learner is starting ATI TEAS review for Life and physical sciences. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "Build a checklist for life and physical sciences that links the stem clues to the safest or most defensible next step.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "Life and physical sciences questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "ati-teas-007",
+      "examId": "ati-teas",
+      "subject": "Scientific reasoning",
+      "prompt": "On a ATI TEAS practice set, a question about Scientific reasoning includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Scientific reasoning.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "ati-teas-008",
+      "examId": "ati-teas",
+      "subject": "English conventions",
+      "prompt": "Which answer choice would be most consistent with strong ATI TEAS performance in English conventions?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem."
+      ],
+      "answerIndex": 3,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "ati-teas-009",
+      "examId": "ati-teas",
+      "subject": "Vocabulary in context",
+      "prompt": "A candidate repeatedly misses Vocabulary in context items while preparing for ATI TEAS. What remediation step is most useful?",
+      "options": [
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Vocabulary in context.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "ati-teas-010",
+      "examId": "ati-teas",
+      "subject": "Written expression",
+      "prompt": "During timed ATI TEAS practice, what is the best approach to a difficult Written expression item?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "ati-teas-011",
+      "examId": "ati-teas",
+      "subject": "Reading key ideas",
+      "prompt": "A learner is starting ATI TEAS review for Reading key ideas. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Build a checklist for reading key ideas that links the stem clues to the safest or most defensible next step.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "Reading key ideas questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "ati-teas-012",
+      "examId": "ati-teas",
+      "subject": "Reading craft and structure",
+      "prompt": "On a ATI TEAS practice set, a question about Reading craft and structure includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Identify the command word and the highest-value clue before comparing the answer choices."
+      ],
+      "answerIndex": 3,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Reading craft and structure.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "ati-teas-013",
+      "examId": "ati-teas",
+      "subject": "Mathematics numbers and algebra",
+      "prompt": "Which answer choice would be most consistent with strong ATI TEAS performance in Mathematics numbers and algebra?",
+      "options": [
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "ati-teas-014",
+      "examId": "ati-teas",
+      "subject": "Measurement and data",
+      "prompt": "A candidate repeatedly misses Measurement and data items while preparing for ATI TEAS. What remediation step is most useful?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Measurement and data.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "ati-teas-015",
+      "examId": "ati-teas",
+      "subject": "Human anatomy and physiology",
+      "prompt": "During timed ATI TEAS practice, what is the best approach to a difficult Human anatomy and physiology item?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "ati-teas-016",
+      "examId": "ati-teas",
+      "subject": "Life and physical sciences",
+      "prompt": "A learner is starting ATI TEAS review for Life and physical sciences. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Build a checklist for life and physical sciences that links the stem clues to the safest or most defensible next step."
+      ],
+      "answerIndex": 3,
+      "explanation": "Life and physical sciences questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "ati-teas-017",
+      "examId": "ati-teas",
+      "subject": "Scientific reasoning",
+      "prompt": "On a ATI TEAS practice set, a question about Scientific reasoning includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Scientific reasoning.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "ati-teas-018",
+      "examId": "ati-teas",
+      "subject": "English conventions",
+      "prompt": "Which answer choice would be most consistent with strong ATI TEAS performance in English conventions?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "ati-teas-019",
+      "examId": "ati-teas",
+      "subject": "Vocabulary in context",
+      "prompt": "A candidate repeatedly misses Vocabulary in context items while preparing for ATI TEAS. What remediation step is most useful?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Vocabulary in context.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "ati-teas-020",
+      "examId": "ati-teas",
+      "subject": "Written expression",
+      "prompt": "During timed ATI TEAS practice, what is the best approach to a difficult Written expression item?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows."
+      ],
+      "answerIndex": 3,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "ati-teas-021",
+      "examId": "ati-teas",
+      "subject": "Reading key ideas",
+      "prompt": "A learner is starting ATI TEAS review for Reading key ideas. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Build a checklist for reading key ideas that links the stem clues to the safest or most defensible next step.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "Reading key ideas questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "ati-teas-022",
+      "examId": "ati-teas",
+      "subject": "Reading craft and structure",
+      "prompt": "On a ATI TEAS practice set, a question about Reading craft and structure includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Reading craft and structure.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "ati-teas-023",
+      "examId": "ati-teas",
+      "subject": "Mathematics numbers and algebra",
+      "prompt": "Which answer choice would be most consistent with strong ATI TEAS performance in Mathematics numbers and algebra?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "ati-teas-024",
+      "examId": "ati-teas",
+      "subject": "Measurement and data",
+      "prompt": "A candidate repeatedly misses Measurement and data items while preparing for ATI TEAS. What remediation step is most useful?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Review missed-question rationales and group them by the underlying concept being tested."
+      ],
+      "answerIndex": 3,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Measurement and data.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "ati-teas-025",
+      "examId": "ati-teas",
+      "subject": "Human anatomy and physiology",
+      "prompt": "During timed ATI TEAS practice, what is the best approach to a difficult Human anatomy and physiology item?",
+      "options": [
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "ati-teas-026",
+      "examId": "ati-teas",
+      "subject": "Life and physical sciences",
+      "prompt": "A learner is starting ATI TEAS review for Life and physical sciences. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Build a checklist for life and physical sciences that links the stem clues to the safest or most defensible next step.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "Life and physical sciences questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "ati-teas-027",
+      "examId": "ati-teas",
+      "subject": "Scientific reasoning",
+      "prompt": "On a ATI TEAS practice set, a question about Scientific reasoning includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Scientific reasoning.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "ati-teas-028",
+      "examId": "ati-teas",
+      "subject": "English conventions",
+      "prompt": "Which answer choice would be most consistent with strong ATI TEAS performance in English conventions?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem."
+      ],
+      "answerIndex": 3,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "ati-teas-029",
+      "examId": "ati-teas",
+      "subject": "Vocabulary in context",
+      "prompt": "A candidate repeatedly misses Vocabulary in context items while preparing for ATI TEAS. What remediation step is most useful?",
+      "options": [
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Vocabulary in context.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "ati-teas-030",
+      "examId": "ati-teas",
+      "subject": "Written expression",
+      "prompt": "During timed ATI TEAS practice, what is the best approach to a difficult Written expression item?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "ati-teas-031",
+      "examId": "ati-teas",
+      "subject": "Reading key ideas",
+      "prompt": "A learner is starting ATI TEAS review for Reading key ideas. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Build a checklist for reading key ideas that links the stem clues to the safest or most defensible next step.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "Reading key ideas questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "ati-teas-032",
+      "examId": "ati-teas",
+      "subject": "Reading craft and structure",
+      "prompt": "On a ATI TEAS practice set, a question about Reading craft and structure includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Identify the command word and the highest-value clue before comparing the answer choices."
+      ],
+      "answerIndex": 3,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Reading craft and structure.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "ati-teas-033",
+      "examId": "ati-teas",
+      "subject": "Mathematics numbers and algebra",
+      "prompt": "Which answer choice would be most consistent with strong ATI TEAS performance in Mathematics numbers and algebra?",
+      "options": [
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "ati-teas-034",
+      "examId": "ati-teas",
+      "subject": "Measurement and data",
+      "prompt": "A candidate repeatedly misses Measurement and data items while preparing for ATI TEAS. What remediation step is most useful?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Measurement and data.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "ati-teas-035",
+      "examId": "ati-teas",
+      "subject": "Human anatomy and physiology",
+      "prompt": "During timed ATI TEAS practice, what is the best approach to a difficult Human anatomy and physiology item?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "ati-teas-036",
+      "examId": "ati-teas",
+      "subject": "Life and physical sciences",
+      "prompt": "A learner is starting ATI TEAS review for Life and physical sciences. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Build a checklist for life and physical sciences that links the stem clues to the safest or most defensible next step."
+      ],
+      "answerIndex": 3,
+      "explanation": "Life and physical sciences questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "ati-teas-037",
+      "examId": "ati-teas",
+      "subject": "Scientific reasoning",
+      "prompt": "On a ATI TEAS practice set, a question about Scientific reasoning includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Scientific reasoning.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "ati-teas-038",
+      "examId": "ati-teas",
+      "subject": "English conventions",
+      "prompt": "Which answer choice would be most consistent with strong ATI TEAS performance in English conventions?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "ati-teas-039",
+      "examId": "ati-teas",
+      "subject": "Vocabulary in context",
+      "prompt": "A candidate repeatedly misses Vocabulary in context items while preparing for ATI TEAS. What remediation step is most useful?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Vocabulary in context.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "ati-teas-040",
+      "examId": "ati-teas",
+      "subject": "Written expression",
+      "prompt": "During timed ATI TEAS practice, what is the best approach to a difficult Written expression item?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows."
+      ],
+      "answerIndex": 3,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "ati-teas-041",
+      "examId": "ati-teas",
+      "subject": "Reading key ideas",
+      "prompt": "A learner is starting ATI TEAS review for Reading key ideas. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Build a checklist for reading key ideas that links the stem clues to the safest or most defensible next step.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Reading key ideas questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "ati-teas-042",
+      "examId": "ati-teas",
+      "subject": "Reading craft and structure",
+      "prompt": "On a ATI TEAS practice set, a question about Reading craft and structure includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Reading craft and structure.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "ati-teas-043",
+      "examId": "ati-teas",
+      "subject": "Mathematics numbers and algebra",
+      "prompt": "Which answer choice would be most consistent with strong ATI TEAS performance in Mathematics numbers and algebra?",
+      "options": [
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem.",
+        "Select an option that sounds familiar even though it does not solve the problem."
+      ],
+      "answerIndex": 2,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "ati-teas-044",
+      "examId": "ati-teas",
+      "subject": "Measurement and data",
+      "prompt": "A candidate repeatedly misses Measurement and data items while preparing for ATI TEAS. What remediation step is most useful?",
+      "options": [
+        "Focus on a low-risk detail before addressing the main tested objective.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Review missed-question rationales and group them by the underlying concept being tested."
+      ],
+      "answerIndex": 3,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Measurement and data.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "ati-teas-045",
+      "examId": "ati-teas",
+      "subject": "Human anatomy and physiology",
+      "prompt": "During timed ATI TEAS practice, what is the best approach to a difficult Human anatomy and physiology item?",
+      "options": [
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Select an option that sounds familiar even though it does not solve the problem.",
+        "Delay the decision until every possible fact has been reviewed.",
+        "Treat all choices as equally likely and guess before identifying the domain."
+      ],
+      "answerIndex": 0,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    },
+    {
+      "_id": "ati-teas-046",
+      "examId": "ati-teas",
+      "subject": "Life and physical sciences",
+      "prompt": "A learner is starting ATI TEAS review for Life and physical sciences. Which study action best matches the way this topic is usually tested?",
+      "options": [
+        "Delay the decision until every possible fact has been reviewed.",
+        "Build a checklist for life and physical sciences that links the stem clues to the safest or most defensible next step.",
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority."
+      ],
+      "answerIndex": 1,
+      "explanation": "Life and physical sciences questions reward recognizing the tested objective first, then choosing the action that directly addresses it.",
+      "tags": [
+        "Starter",
+        "Study strategy"
+      ]
+    },
+    {
+      "_id": "ati-teas-047",
+      "examId": "ati-teas",
+      "subject": "Scientific reasoning",
+      "prompt": "On a ATI TEAS practice set, a question about Scientific reasoning includes several attractive distractors. What should the candidate do first?",
+      "options": [
+        "Treat all choices as equally likely and guess before identifying the domain.",
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Identify the command word and the highest-value clue before comparing the answer choices.",
+        "Choose the longest option because exam writers often include more detail there."
+      ],
+      "answerIndex": 2,
+      "explanation": "Command words and key clues narrow the task, which prevents choosing a familiar but off-target answer in Scientific reasoning.",
+      "tags": [
+        "Starter",
+        "Question analysis"
+      ]
+    },
+    {
+      "_id": "ati-teas-048",
+      "examId": "ati-teas",
+      "subject": "English conventions",
+      "prompt": "Which answer choice would be most consistent with strong ATI TEAS performance in English conventions?",
+      "options": [
+        "Ignore qualifying words such as first, best, except, most, and priority.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "An option that applies the relevant rule, standard, or clinical principle to the facts given in the stem."
+      ],
+      "answerIndex": 3,
+      "explanation": "Most certification items test application. The best choice uses the topic rule in context rather than repeating a vague definition.",
+      "tags": [
+        "Starter",
+        "Application"
+      ]
+    },
+    {
+      "_id": "ati-teas-049",
+      "examId": "ati-teas",
+      "subject": "Vocabulary in context",
+      "prompt": "A candidate repeatedly misses Vocabulary in context items while preparing for ATI TEAS. What remediation step is most useful?",
+      "options": [
+        "Review missed-question rationales and group them by the underlying concept being tested.",
+        "Choose the longest option because exam writers often include more detail there.",
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Skip the data in the stem and answer from personal experience."
+      ],
+      "answerIndex": 0,
+      "explanation": "Grouping misses by concept turns scattered errors into a targeted review plan for Vocabulary in context.",
+      "tags": [
+        "Starter",
+        "Remediation"
+      ]
+    },
+    {
+      "_id": "ati-teas-050",
+      "examId": "ati-teas",
+      "subject": "Written expression",
+      "prompt": "During timed ATI TEAS practice, what is the best approach to a difficult Written expression item?",
+      "options": [
+        "Rely on a memorized phrase without checking whether it fits the scenario.",
+        "Eliminate choices that conflict with the stem, choose the most defensible remaining option, and mark it for review if time allows.",
+        "Skip the data in the stem and answer from personal experience.",
+        "Focus on a low-risk detail before addressing the main tested objective."
+      ],
+      "answerIndex": 1,
+      "explanation": "A disciplined elimination process protects time while still using the evidence available in the question.",
+      "tags": [
+        "Starter",
+        "Timed practice"
+      ]
+    }
+  ]
+}

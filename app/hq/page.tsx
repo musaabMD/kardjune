@@ -37,6 +37,15 @@ type CountRow = { value: number | null };
 type AiRow = { usedUsd: number | null; requests: number | null };
 type GoalRow = { name: string; count: number };
 type ExamRow = { id: string; slug: string; title: string; role: string };
+type BankQuestion = {
+  _id?: string;
+  id?: string;
+  prompt?: string;
+  question?: string;
+  options?: string[];
+  answerIndex?: number;
+  explanation?: string;
+};
 type UserTableRow = {
   clerkUserId: string;
   email: string | null;
@@ -149,6 +158,22 @@ function formatBytes(value: number | null | undefined) {
   return `${bytes.format(size / (1024 * 1024))} MB`;
 }
 
+function formatDuration(value: number | null | undefined) {
+  const ms = Number(value ?? 0);
+  if (ms <= 0) return "0s";
+  const seconds = Math.round(ms / 1000);
+  if (seconds < 60) return `${seconds}s`;
+  const minutes = Math.floor(seconds / 60);
+  const remainder = seconds % 60;
+  if (minutes < 60) return `${minutes}m ${remainder}s`;
+  const hours = Math.floor(minutes / 60);
+  return `${hours}h ${minutes % 60}m`;
+}
+
+function formatPercent(value: number | null | undefined) {
+  return `${Math.round(Number(value ?? 0) * 100)}%`;
+}
+
 function row(input: Partial<Row> & Record<string, string | number | boolean | null | undefined>): Row {
   return {
     period: String(input.period ?? ""),
@@ -219,6 +244,28 @@ async function questionCountFromR2(bucket: R2Bucket | undefined, examSlug: strin
   } catch {
     return 0;
   }
+}
+
+async function questionMapFromR2(bucket: R2Bucket | undefined, exams: ExamRow[]) {
+  const entries = await Promise.all(
+    exams.map(async (exam) => {
+      try {
+        const object = await bucket?.get(`qbanks/v1/${exam.slug}/all.json`);
+        if (!object) return [];
+        const payload = (await object.json()) as { questions?: BankQuestion[] } | BankQuestion[];
+        const questions = Array.isArray(payload) ? payload : payload.questions ?? [];
+        return questions
+          .map((question) => {
+            const id = question._id ?? question.id;
+            return id ? ([id, question] as const) : null;
+          })
+          .filter((item): item is readonly [string, BankQuestion] => Boolean(item));
+      } catch {
+        return [];
+      }
+    }),
+  );
+  return new Map(entries.flat());
 }
 
 function changeStat(current: number, baseline: number, positiveIsGood: boolean): Stat {
@@ -322,6 +369,11 @@ export default async function HqPage() {
     feedbackSeries,
     aiCostSeries,
     eventSeries,
+    totalSubscriptions,
+    inactiveSubscriptions,
+    repeatUsers,
+    avgVisitDuration,
+    npsScore,
   ] = await Promise.all([
     safeFirst<CountRow>(db, "select count(*) as value from users"),
     safeFirst<CountRow>(db, "select count(*) as value from subscriptions where status in ('active', 'trialing', 'past_due')"),
@@ -342,6 +394,43 @@ export default async function HqPage() {
     weeklySeries(db, "select count(*) as value from question_feedback where created_at >= ? and created_at < ?", now),
     weeklySeries(db, "select coalesce(sum(estimated_cost_usd), 0) as value from ai_usage_events where created_at >= ? and created_at < ?", now),
     weeklySeries(db, "select count(*) as value from analytics_events where created_at >= ? and created_at < ?", now),
+    safeFirst<CountRow>(db, "select count(*) as value from subscriptions"),
+    safeFirst<CountRow>(db, "select count(*) as value from subscriptions where status not in ('active', 'trialing', 'past_due')"),
+    safeFirst<CountRow>(
+      db,
+      `select count(*) as value
+       from (
+         select clerk_user_id
+         from practice_sessions
+         group by clerk_user_id
+         having count(*) > 1
+       )`,
+    ),
+    safeFirst<CountRow>(
+      db,
+      `select avg(duration) as value
+       from (
+         select max(created_at) - min(created_at) as duration
+         from analytics_events
+         where created_at >= ?
+         group by coalesce(clerk_user_id, user_agent, referrer, path), date(created_at / 1000, 'unixepoch')
+         having count(*) > 1
+       )`,
+      since30,
+    ),
+    safeFirst<CountRow>(
+      db,
+      `select coalesce(100.0 * (
+          sum(case when score >= 9 then 1 else 0 end) -
+          sum(case when score <= 6 then 1 else 0 end)
+        ) / nullif(count(*), 0), 0) as value
+       from (
+         select cast(json_extract(metadata, '$.score') as real) as score
+         from analytics_events
+         where name = 'nps_submitted'
+       )
+       where score is not null`,
+    ),
   ]);
 
   const questionCounts = await Promise.all(
@@ -353,9 +442,17 @@ export default async function HqPage() {
       }
     }),
   );
+  const questionMap = await questionMapFromR2(env.DRKARD_QBANKS, exams);
   const totalBankQuestions = questionCounts.reduce((sum, count) => sum + count, 0);
+  const coveredExamCount = questionCounts.filter((count) => count > 0).length;
   const cloudflareReady = [env.DRKARD_DB, env.DRKARD_QBANKS, env.DRKARD_UPLOADS, env.DRKARD_LIMITS].filter(Boolean).length;
   const eventCount30 = goalRows.reduce((sum, row) => sum + row.count, 0);
+  const totalUsersValue = Number(userCount?.value ?? 0);
+  const totalSubscriptionsValue = Number(totalSubscriptions?.value ?? 0);
+  const inactiveSubscriptionsValue = Number(inactiveSubscriptions?.value ?? 0);
+  const repeatUsersValue = Number(repeatUsers?.value ?? 0);
+  const retentionRate = totalUsersValue ? repeatUsersValue / totalUsersValue : 0;
+  const churnRate = totalSubscriptionsValue ? inactiveSubscriptionsValue / totalSubscriptionsValue : 0;
 
   const [
     usersTable,
@@ -375,7 +472,7 @@ export default async function HqPage() {
        from users u
        left join subscriptions s on s.clerk_user_id = u.clerk_user_id
        order by u.created_at desc
-       limit 250`,
+       limit 5000`,
     ),
     safeAll<SubscriptionTableRow>(
       db,
@@ -386,7 +483,7 @@ export default async function HqPage() {
        from subscriptions s
        left join users u on u.clerk_user_id = s.clerk_user_id
        order by s.updated_at desc
-       limit 250`,
+       limit 5000`,
     ),
     safeAll<SessionTableRow>(
       db,
@@ -395,7 +492,7 @@ export default async function HqPage() {
        from practice_sessions p
        left join users u on u.clerk_user_id = p.clerk_user_id
        order by p.created_at desc
-       limit 250`,
+       limit 5000`,
     ),
     safeAll<AnswerTableRow>(
       db,
@@ -404,7 +501,7 @@ export default async function HqPage() {
        from session_answers a
        left join users u on u.clerk_user_id = a.clerk_user_id
        order by a.session_id desc, a.position asc
-       limit 250`,
+       limit 5000`,
     ),
     safeAll<UploadTableRow>(
       db,
@@ -413,7 +510,7 @@ export default async function HqPage() {
        from uploads f
        left join users u on u.clerk_user_id = f.clerk_user_id
        order by f.created_at desc
-       limit 250`,
+       limit 5000`,
     ),
     safeAll<FeedbackTableRow>(
       db,
@@ -423,7 +520,7 @@ export default async function HqPage() {
        from question_feedback q
        left join users u on u.clerk_user_id = q.clerk_user_id
        order by q.created_at desc
-       limit 250`,
+       limit 5000`,
     ),
     safeAll<AiUsageTableRow>(
       db,
@@ -434,7 +531,7 @@ export default async function HqPage() {
        from ai_usage_events a
        left join users u on u.clerk_user_id = a.clerk_user_id
        order by a.created_at desc
-       limit 250`,
+       limit 5000`,
     ),
     safeAll<AnalyticsTableRow>(
       db,
@@ -443,7 +540,7 @@ export default async function HqPage() {
        from analytics_events e
        left join users u on u.clerk_user_id = e.clerk_user_id
        order by e.created_at desc
-       limit 250`,
+       limit 5000`,
     ),
     safeAll<RetentionTableRow>(
       db,
@@ -455,7 +552,7 @@ export default async function HqPage() {
        left join users u on u.clerk_user_id = p.clerk_user_id
        group by p.clerk_user_id, u.email
        order by sessions desc, lastSessionAt desc
-       limit 250`,
+       limit 5000`,
     ),
   ]);
 
@@ -522,15 +619,23 @@ export default async function HqPage() {
     });
   });
 
-  const answerRows = answersTable.map((item) =>
-    row({
+  const answerRows = answersTable.map((item) => {
+    const question = questionMap.get(item.questionId);
+    const options = question?.options ?? [];
+    const selectedText = item.selected >= 0 ? options[item.selected] ?? String(item.selected) : "Unanswered";
+    const correctText = options[item.correct] ?? String(item.correct);
+    return row({
       email: item.email ?? "",
       sessionId: item.sessionId,
       examId: item.examId,
       questionId: item.questionId,
+      questionText: question?.prompt ?? question?.question ?? "",
       position: item.position,
       selected: item.selected,
+      selectedAnswer: selectedText,
       correctAnswer: item.correct,
+      correctAnswerText: correctText,
+      explanation: question?.explanation ?? "",
       status: item.selected === item.correct ? "On track" : "Off track",
       trend: item.selected === item.correct ? "Up" : "Down",
       mode: "Single",
@@ -541,8 +646,8 @@ export default async function HqPage() {
       changeDir: item.selected === item.correct ? "up" : "down",
       changeGood: item.selected === item.correct,
       vsTarget: item.selected === item.correct ? "Correct" : "Wrong",
-    }),
-  );
+    });
+  });
 
   const uploadRows = uploadsTable.map((item) =>
     row({
@@ -730,9 +835,13 @@ export default async function HqPage() {
     { field: "questionId", headerName: "Question", minWidth: 260, pinned: "left", editable: false },
     { field: "email", headerName: "User", minWidth: 240, editable: false },
     { field: "examId", headerName: "Exam", minWidth: 160 },
+    { field: "questionText", headerName: "Prompt", minWidth: 420, editable: false },
     { field: "position", headerName: "Position", minWidth: 120 },
     { field: "selected", headerName: "Selected", minWidth: 120 },
+    { field: "selectedAnswer", headerName: "Selected Text", minWidth: 320, editable: false },
     { field: "correctAnswer", headerName: "Correct", minWidth: 120 },
+    { field: "correctAnswerText", headerName: "Correct Text", minWidth: 320, editable: false },
+    { field: "explanation", headerName: "Explanation", minWidth: 420, editable: false },
     { field: "status", headerName: "Status", minWidth: 150, kind: "status" },
   ];
 
@@ -807,6 +916,42 @@ export default async function HqPage() {
     { field: "assignee", headerName: "Owner", minWidth: 150, kind: "assignee" },
   ];
 
+  const kpiColumns: HqColumn[] = [
+    { field: "metric", headerName: "Metric", minWidth: 240, pinned: "left", editable: false },
+    { field: "value", headerName: "Value", minWidth: 160, editable: false },
+    { field: "basis", headerName: "Basis", minWidth: 360, editable: false },
+    { field: "status", headerName: "Status", minWidth: 150, kind: "status" },
+  ];
+
+  const kpiRow = (metric: string, value: string, basis: string, status: Status = "At risk") =>
+    row({
+      metric,
+      basis,
+      status,
+      mode: "Single",
+      assignee: "Ops",
+      period: metric,
+      value,
+      change: basis,
+      vsTarget: basis,
+      changeGood: status === "On track",
+      changeDir: status === "On track" ? "up" : "down",
+      trend: status === "On track" ? "Up" : "Down",
+    });
+
+  const examsCoveredRows = exams.map((exam, index) =>
+    kpiRow(exam.title, `${questionCounts[index] ?? 0}`, exam.slug, (questionCounts[index] ?? 0) > 0 ? "On track" : "Off track"),
+  );
+  const npsRows = [kpiRow("NPS", `${Math.round(npsScore?.value ?? 0)}`, "analytics_events metadata score for nps_submitted")];
+  const grossMarginRows = [kpiRow("Gross Margin", "0%", "Revenue and service-cost inputs are not connected yet.")];
+  const ltvRows = [kpiRow("Lifetime Value", money.format(0), "Revenue per customer requires Stripe invoice totals.")];
+  const ltvCacRows = [kpiRow("LTV:CAC Ratio", "0.0x", "CAC input is not connected yet.")];
+  const retentionRateRows = [kpiRow("Retention", formatPercent(retentionRate), "Repeat users divided by total users", retentionRate >= 0.4 ? "On track" : "At risk")];
+  const churnRows = [kpiRow("Churn", formatPercent(churnRate), "Inactive subscriptions divided by total subscriptions", churnRate <= 0.05 ? "On track" : "At risk")];
+  const visitDurationRows = [
+    kpiRow("Visit duration", formatDuration(avgVisitDuration?.value), "Average same-day analytics event span per user or visitor", Number(avgVisitDuration?.value ?? 0) > 0 ? "On track" : "At risk"),
+  ];
+
   const metrics: HqMetric[] = [
     metricFromSeries({
       id: "users",
@@ -857,8 +1002,8 @@ export default async function HqPage() {
       columns: sessionColumns,
     }),
     metricFromSeries({
-      id: "questions",
-      title: "Questions Answered",
+      id: "answers-by-users",
+      title: "Answers by Users",
       unit: "Last 30 days",
       value: compact.format(questions30?.value ?? 0),
       category: "Learning",
@@ -951,6 +1096,134 @@ export default async function HqPage() {
       format: (value) => compact.format(Math.round(value)),
       rows: questionBankRows,
       columns: questionBankColumns,
+    }),
+    metricFromSeries({
+      id: "exams-covered",
+      title: "Exams Covered",
+      unit: "Number of certifications/exams",
+      value: `${number.format(coveredExamCount)}/${number.format(exams.length)}`,
+      category: "Content",
+      icon: "Hexagon",
+      ownerIndex: 3,
+      series: flatSeries(coveredExamCount),
+      targetValue: exams.length || 1,
+      targetLabel: "All exams covered",
+      positiveIsGood: true,
+      format: (value) => number.format(Math.round(value)),
+      rows: examsCoveredRows,
+      columns: kpiColumns,
+    }),
+    metricFromSeries({
+      id: "nps",
+      title: "NPS",
+      unit: "Customer satisfaction",
+      value: `${Math.round(npsScore?.value ?? 0)}`,
+      category: "Quality",
+      icon: "Star",
+      ownerIndex: 4,
+      series: flatSeries(Number(npsScore?.value ?? 0)),
+      targetValue: 50,
+      targetLabel: "NPS 50",
+      positiveIsGood: true,
+      format: (value) => `${Math.round(value)}`,
+      rows: npsRows,
+      columns: kpiColumns,
+    }),
+    metricFromSeries({
+      id: "gross-margin",
+      title: "Gross Margin",
+      unit: "Profit after service costs",
+      value: "0%",
+      category: "Revenue",
+      icon: "DollarSign",
+      ownerIndex: 5,
+      series: flatSeries(0),
+      targetValue: 0.7,
+      targetLabel: "70% margin",
+      positiveIsGood: true,
+      format: (value) => formatPercent(value),
+      rows: grossMarginRows,
+      columns: kpiColumns,
+    }),
+    metricFromSeries({
+      id: "ltv",
+      title: "Lifetime Value",
+      unit: "Revenue per customer",
+      value: money.format(0),
+      category: "Revenue",
+      icon: "DollarSign",
+      ownerIndex: 0,
+      series: flatSeries(0),
+      targetValue: 100,
+      targetLabel: "$100 LTV",
+      positiveIsGood: true,
+      format: (value) => money.format(value),
+      rows: ltvRows,
+      columns: kpiColumns,
+    }),
+    metricFromSeries({
+      id: "ltv-cac",
+      title: "LTV:CAC Ratio",
+      unit: "Profitability of acquisition",
+      value: "0.0x",
+      category: "Revenue",
+      icon: "Gauge",
+      ownerIndex: 1,
+      series: flatSeries(0),
+      targetValue: 3,
+      targetLabel: "3x target",
+      positiveIsGood: true,
+      format: (value) => `${value.toFixed(1)}x`,
+      rows: ltvCacRows,
+      columns: kpiColumns,
+    }),
+    metricFromSeries({
+      id: "retention-rate",
+      title: "Retention",
+      unit: "% of users renewing",
+      value: formatPercent(retentionRate),
+      category: "Retention",
+      icon: "Repeat",
+      ownerIndex: 2,
+      series: flatSeries(retentionRate),
+      targetValue: 0.4,
+      targetLabel: "40% repeat use",
+      positiveIsGood: true,
+      format: (value) => formatPercent(value),
+      rows: retentionRateRows,
+      columns: kpiColumns,
+    }),
+    metricFromSeries({
+      id: "churn",
+      title: "Churn",
+      unit: "% of users leaving",
+      value: formatPercent(churnRate),
+      category: "Retention",
+      icon: "TrendingUp",
+      ownerIndex: 3,
+      series: flatSeries(churnRate),
+      targetValue: 0.05,
+      targetLabel: "Under 5%",
+      positiveIsGood: false,
+      format: (value) => formatPercent(value),
+      rows: churnRows,
+      columns: kpiColumns,
+    }),
+    metricFromSeries({
+      id: "visit-duration",
+      title: "Visit Duration",
+      unit: "Duration of site visitors",
+      value: formatDuration(avgVisitDuration?.value),
+      category: "Analytics",
+      icon: "Clock",
+      ownerIndex: 4,
+      series: flatSeries(Number(avgVisitDuration?.value ?? 0)),
+      targetValue: 180_000,
+      targetLabel: "3m average",
+      positiveIsGood: true,
+      format: (value) => formatDuration(value),
+      rows: visitDurationRows,
+      columns: kpiColumns,
     }),
     metricFromSeries({
       id: "analytics",

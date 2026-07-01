@@ -1,9 +1,6 @@
 "use client";
 
-import { ACTIVE_GOAL_NAMES } from "@/lib/hq-goals";
-
 export function trackGoal(name: string, metadata?: Record<string, unknown>) {
-  if (!ACTIVE_GOAL_NAMES.has(name)) return;
   const payload = JSON.stringify({
     name,
     path: typeof window !== "undefined" ? window.location.pathname : undefined,

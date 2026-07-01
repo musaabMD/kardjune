@@ -2,7 +2,7 @@ import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { FREE_QUESTIONS_PER_24H, FREE_UPLOADS_PER_24H } from "@/lib/billing-limits";
 import { PRO_AI_BUDGET_USD } from "@/lib/constants";
 import { monthStartUtcMs, nextMonthStartUtcMs } from "@/lib/ai-pricing";
-import { ACTIVE_GOAL_NAMES } from "@/lib/hq-goals";
+import { getActiveGoalNames } from "@/lib/hq-goals-store";
 import { SAMPLE_EXAMS, sampleQuestionsForExam, type BankQuestion, type ExamRecord } from "@/lib/sample-data";
 
 const PRO_STATUSES = new Set(["active", "trialing", "past_due"]);
@@ -72,8 +72,9 @@ export async function recordEvent(options: {
   path?: string | null;
   metadata?: Record<string, unknown>;
 }) {
-  if (!ACTIVE_GOAL_NAMES.has(options.name)) return;
   const env = await cloudflareEnv();
+  const activeGoalNames = await getActiveGoalNames(env.DRKARD_DB);
+  if (!activeGoalNames.has(options.name)) return;
   await run(
     env.DRKARD_DB,
     `insert into analytics_events

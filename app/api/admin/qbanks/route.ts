@@ -1,8 +1,9 @@
 import { currentUser } from "@clerk/nextjs/server";
 import { NextRequest, NextResponse } from "next/server";
 import { cloudflareEnv, createId, run } from "@/lib/cloudflare-store";
+import { HQ_OWNER_EMAIL } from "@/lib/hq-admin";
 
-const HQ_OWNER_EMAIL = "mousab.r@gmail.com";
+export const dynamic = "force-dynamic";
 
 type QuestionPayload = {
   questions?: unknown;
@@ -24,6 +25,33 @@ async function assertOwner() {
   const user = await currentUser();
   const email = user?.primaryEmailAddress?.emailAddress?.toLowerCase();
   return email === HQ_OWNER_EMAIL;
+}
+
+export async function GET(req: NextRequest) {
+  if (!(await assertOwner())) return jsonError("Unauthorized.", 401);
+
+  const slug = slugify(req.nextUrl.searchParams.get("slug") ?? "");
+  if (!slug) return jsonError("Exam slug is required.", 400);
+
+  const env = await cloudflareEnv();
+  if (!env.DRKARD_QBANKS) return jsonError("DRKARD_QBANKS R2 binding is not configured.", 500);
+
+  const key = `qbanks/v1/${slug}/all.json`;
+  const object = await env.DRKARD_QBANKS.get(key);
+  if (!object) return jsonError("Question bank not found.", 404);
+
+  const payload = (await object.json().catch(() => null)) as { questions?: unknown[] } | unknown[] | null;
+  const questions = Array.isArray(payload) ? payload : payload?.questions;
+  if (!Array.isArray(questions)) return jsonError("Question bank payload is invalid.", 500);
+
+  return NextResponse.json({
+    slug,
+    key,
+    title: object.customMetadata?.title ?? slug,
+    role: object.customMetadata?.role ?? "Exam",
+    questionCount: questions.length,
+    questions,
+  });
 }
 
 export async function POST(req: NextRequest) {
