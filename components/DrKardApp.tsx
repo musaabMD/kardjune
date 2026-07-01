@@ -12,7 +12,7 @@ import {
   Image as ImageIcon, Flame, Stethoscope, Scale, Cpu, Briefcase, Languages,
   FlaskConical, Landmark, Calculator, PenTool, Globe, Copy, Share2,
 } from "lucide-react";
-import { SignInButton, UserButton, useAuth, useUser } from "@clerk/nextjs";
+import { SignInButton, SignUpButton, UserButton, useAuth, useUser } from "@clerk/nextjs";
 import {
   MessageScroller,
   MessageScrollerButton,
@@ -57,6 +57,9 @@ type Entitlements = {
   aiUsedUsd?: number | null;
   aiBudgetUsd?: number | null;
   aiRemainingUsd?: number | null;
+  uploadsUsedToday?: number | null;
+  uploadsLimit?: number | null;
+  uploadsRemaining?: number | null;
 };
 type ExamState = {
   sessions: Array<{ id: string; _creationTime: number; title: string; total: number; correct: number; durationSec: number }>;
@@ -2131,7 +2134,6 @@ export function DrKardApp({ initialPath = "/" }: { initialPath?: string }) {
   const openExam = (e: ExamItem) => { trackGoal("exam_opened", { examId: e._id ?? e.slug ?? slugify(e.title), title: e.title }); setExam(e); setPage("exam"); setFlashSlug(null); setQuizSlug(null); setQuizResult(false); setAiThreadId(null); setPracticeSlug(null); setFlashTest(false); setNoteSlug(null); };
   const startSignup = () => {
     trackGoal("signup_started");
-    window.location.assign("/sign-up");
   };
   const billingProps = {
     isPro: entitlements?.isPro,
@@ -2154,7 +2156,9 @@ export function DrKardApp({ initialPath = "/" }: { initialPath?: string }) {
               <div className="flex items-center gap-2">
                 <HeaderActions isSignedIn={!!isSignedIn} onUpgrade={() => setPricing(true)} {...billingProps} />
                 {isSignedIn ? <UserButton /> : (
-                  <button type="button" onClick={startSignup} className="rounded-2xl bg-white px-4 py-2.5 text-sm font-black uppercase tracking-wide active:translate-y-0.5" style={{ color: C.eel, boxShadow: "0 3px 0 rgba(0,0,0,.18)" }}>Get started</button>
+                  <SignUpButton mode="modal">
+                    <button type="button" onClick={startSignup} className="rounded-2xl bg-white px-4 py-2.5 text-sm font-black uppercase tracking-wide active:translate-y-0.5" style={{ color: C.eel, boxShadow: "0 3px 0 rgba(0,0,0,.18)" }}>Get started</button>
+                  </SignUpButton>
                 )}
               </div>
             </div>
@@ -2222,7 +2226,9 @@ export function DrKardApp({ initialPath = "/" }: { initialPath?: string }) {
               <div className="flex items-center gap-2">
                 <HeaderActions isSignedIn={!!isSignedIn} onUpgrade={() => setPricing(true)} {...billingProps} />
                 {isSignedIn ? <><button type="button" onClick={() => setPage("dashboard")} aria-label="Dashboard" title="Dashboard" className="grid h-10 w-10 place-items-center rounded-2xl bg-white active:translate-y-0.5" style={{ color: C.eel, boxShadow: "0 3px 0 rgba(0,0,0,.18)" }}><LayoutGrid size={18} strokeWidth={3} /></button><UserButton /></> : (
-                  <button type="button" onClick={startSignup} className="rounded-2xl px-4 py-2.5 text-sm font-black uppercase tracking-wide active:translate-y-0.5" style={{ background: C.teal, color: C.white, boxShadow: `0 3px 0 ${C.tealDark}` }}>Get started</button>
+                  <SignUpButton mode="modal">
+                    <button type="button" onClick={startSignup} className="rounded-2xl px-4 py-2.5 text-sm font-black uppercase tracking-wide active:translate-y-0.5" style={{ background: C.teal, color: C.white, boxShadow: `0 3px 0 ${C.tealDark}` }}>Get started</button>
+                  </SignUpButton>
                 )}
               </div>
             </div>
@@ -2264,22 +2270,48 @@ export function DrKardApp({ initialPath = "/" }: { initialPath?: string }) {
                 </div>
               </>
             ) : (
-              <div className="mx-auto max-w-xl">
-                <input ref={fileRef} type="file" multiple className="hidden" onChange={(e) => addFiles(e.target.files)} />
-                <button type="button" onClick={() => fileRef.current?.click()} onDragOver={(e) => { e.preventDefault(); setDrag(true); }} onDragLeave={() => setDrag(false)} onDrop={(e) => { e.preventDefault(); setDrag(false); addFiles(e.dataTransfer.files); }} className="flex w-full flex-col items-center gap-2 rounded-3xl px-6 py-8 active:translate-y-0.5" style={{ background: drag ? C.inkWash : C.white, border: `3px dashed ${drag ? C.ink : C.swan}` }}>
-                  <span className="grid h-14 w-14 place-items-center rounded-2xl" style={{ background: C.inkWash, color: C.ink }}><UploadCloud size={30} strokeWidth={2.5} /></span>
-                  <span className="text-lg font-black" style={{ color: C.eel }}>Drag &amp; drop or tap to upload</span><span className="text-sm font-bold" style={{ color: C.hare }}>PDF, images, or notes · up to 25 MB each</span>
-                </button>
-                <div className="mt-4 rounded-3xl p-4" style={{ background: C.white, boxShadow: `0 3px 0 ${C.swan}` }}>
-                  <textarea value={paste} onChange={(e) => setPaste(e.target.value)} rows={3} placeholder="Paste text, a link, or notes…" className="w-full resize-none rounded-2xl p-3 font-bold outline-none" style={{ background: C.polar, color: C.eel }} />
-                  <div className="mt-2 flex items-center justify-between gap-3"><span className="text-xs font-bold" style={{ color: C.hare }}>Paste anything — we'll sort it for you.</span>
-                    <button type="button" onClick={addPaste} disabled={!paste.trim()} className="flex items-center gap-1.5 rounded-2xl px-4 py-2 text-sm font-black uppercase text-white active:translate-y-0.5 disabled:opacity-40" style={{ background: C.ink, boxShadow: `0 3px 0 ${C.inkDark}` }}><Plus size={16} strokeWidth={3.5} /> Add</button></div>
-                </div>
-                {items.length > 0 && (<div className="mt-6">
-                  <div className="mb-3 flex items-center justify-between"><p className="font-black" style={{ color: C.eel }}>Your library</p><span className="rounded-full px-3 py-1 text-xs font-black" style={{ background: C.inkWash, color: C.ink }}>{done}/{items.length} ready</span></div>
-                  <div className="space-y-2.5">{items.slice(0, 3).map((it) => <ItemRow key={it.id} it={it} onRemove={() => remove(it.id)} />)}</div>
-                  {items.length > 3 && <button type="button" onClick={() => setAllOpen(true)} className="mt-3 flex w-full items-center justify-center gap-2 rounded-2xl py-3 font-black uppercase tracking-wide active:translate-y-0.5" style={{ background: C.white, color: C.eel, border: `2px solid ${C.swan}`, boxShadow: `0 3px 0 ${C.swan}` }}>View all {items.length} items <ChevronRight size={18} strokeWidth={3.5} /></button>}
-                </div>)}
+              <div className="mx-auto grid w-full max-w-5xl gap-5 lg:grid-cols-[minmax(0,1.15fr)_minmax(320px,.85fr)]">
+                <section className="min-w-0">
+                  <div className="mb-4">
+                    <p className="text-xs font-extrabold uppercase tracking-wide" style={{ color: C.hare }}>Source library</p>
+                    <h1 className="mt-1 text-2xl font-black leading-tight md:text-3xl" style={{ color: C.eel }}>Add files, links, or notes</h1>
+                    <p className="mt-1 text-sm font-bold" style={{ color: C.wolf }}>These sources stay inside your DrKard library and power notes, flashcards, quizzes, and MCQs.</p>
+                  </div>
+                  <input ref={fileRef} type="file" multiple className="hidden" onChange={(e) => addFiles(e.target.files)} />
+                  <button type="button" onClick={() => fileRef.current?.click()} onDragOver={(e) => { e.preventDefault(); setDrag(true); }} onDragLeave={() => setDrag(false)} onDrop={(e) => { e.preventDefault(); setDrag(false); addFiles(e.dataTransfer.files); }} className="flex min-h-[220px] w-full flex-col items-center justify-center gap-3 rounded-3xl px-6 py-8 text-center active:translate-y-0.5" style={{ background: drag ? C.inkWash : C.white, border: `3px dashed ${drag ? C.ink : C.swan}` }}>
+                    <span className="grid h-16 w-16 place-items-center rounded-2xl" style={{ background: C.inkWash, color: C.ink }}><UploadCloud size={34} strokeWidth={2.5} /></span>
+                    <span className="text-xl font-black" style={{ color: C.eel }}>Drag &amp; drop or tap to upload</span>
+                    <span className="max-w-sm text-sm font-bold" style={{ color: C.hare }}>PDF, screenshots, slides, notes, or exported docs. Large files are stored in Cloudflare R2.</span>
+                  </button>
+                  <div className="mt-4 rounded-3xl p-4" style={{ background: C.white, boxShadow: `0 3px 0 ${C.swan}` }}>
+                    <div className="mb-2 flex items-center gap-2"><LinkIcon size={18} strokeWidth={3} color={C.ink} /><p className="font-black" style={{ color: C.eel }}>Paste a link or raw notes</p></div>
+                    <textarea value={paste} onChange={(e) => setPaste(e.target.value)} rows={4} placeholder="Paste a URL, lecture notes, copied PDF text, or a topic outline…" className="w-full resize-none rounded-2xl p-3 font-bold outline-none" style={{ background: C.polar, color: C.eel }} />
+                    <div className="mt-2 flex items-center justify-between gap-3"><span className="text-xs font-bold" style={{ color: C.hare }}>Next step: AI generation will chunk, cite, and convert this source.</span>
+                      <button type="button" onClick={addPaste} disabled={!paste.trim()} className="flex items-center gap-1.5 rounded-2xl px-4 py-2 text-sm font-black uppercase text-white active:translate-y-0.5 disabled:opacity-40" style={{ background: C.ink, boxShadow: `0 3px 0 ${C.inkDark}` }}><Plus size={16} strokeWidth={3.5} /> Add</button></div>
+                  </div>
+                  {items.length > 0 && (<div className="mt-6">
+                    <div className="mb-3 flex items-center justify-between"><p className="font-black" style={{ color: C.eel }}>Your sources</p><span className="rounded-full px-3 py-1 text-xs font-black" style={{ background: C.inkWash, color: C.ink }}>{done}/{items.length} ready</span></div>
+                    <div className="space-y-2.5">{items.slice(0, 4).map((it) => <ItemRow key={it.id} it={it} onRemove={() => remove(it.id)} />)}</div>
+                    {items.length > 4 && <button type="button" onClick={() => setAllOpen(true)} className="mt-3 flex w-full items-center justify-center gap-2 rounded-2xl py-3 font-black uppercase tracking-wide active:translate-y-0.5" style={{ background: C.white, color: C.eel, border: `2px solid ${C.swan}`, boxShadow: `0 3px 0 ${C.swan}` }}>View all {items.length} items <ChevronRight size={18} strokeWidth={3.5} /></button>}
+                  </div>)}
+                </section>
+                <aside className="space-y-4">
+                  <div className="rounded-3xl p-5" style={{ background: C.white, boxShadow: `0 3px 0 ${C.swan}` }}>
+                    <div className="flex items-center gap-3"><span className="grid h-11 w-11 place-items-center rounded-2xl text-white" style={{ background: C.teal }}><Sparkles size={22} strokeWidth={3} /></span><div><p className="font-black" style={{ color: C.eel }}>AI generation queue</p><p className="text-sm font-bold" style={{ color: C.hare }}>Planned output from selected sources</p></div></div>
+                    <div className="mt-4 grid gap-2">
+                      {["High-yield notes", "Flashcards", "MCQs with explanations", "Weak-area quiz"].map((label) => <div key={label} className="flex items-center justify-between rounded-2xl px-3 py-2" style={{ background: C.polar }}><span className="font-extrabold" style={{ color: C.eel }}>{label}</span><span className="rounded-full px-2.5 py-1 text-xs font-black" style={{ background: C.tealWash, color: C.teal }}>Next</span></div>)}
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="rounded-3xl p-4" style={{ background: C.white, boxShadow: `0 3px 0 ${C.swan}` }}><p className="text-xs font-black uppercase" style={{ color: C.hare }}>Uploads left</p><p className="mt-1 text-3xl font-black" style={{ color: C.ink }}>{entitlements?.uploadsLimit === null ? "∞" : entitlements?.uploadsRemaining ?? (isSignedIn ? "..." : 5)}</p></div>
+                    <div className="rounded-3xl p-4" style={{ background: C.white, boxShadow: `0 3px 0 ${C.swan}` }}><p className="text-xs font-black uppercase" style={{ color: C.hare }}>AI budget left</p><p className="mt-1 text-3xl font-black" style={{ color: C.teal }}>{entitlements?.aiRemainingUsd != null ? `$${entitlements.aiRemainingUsd}` : isSignedIn ? "$0" : "$-"}</p></div>
+                  </div>
+                  <div className="rounded-3xl p-5" style={{ background: C.ink, color: C.white }}>
+                    <p className="font-black">Budget controls</p>
+                    <p className="mt-2 text-sm font-bold text-white/70">Every AI job will be priced before it runs, written to `ai_usage_events`, and blocked when the user budget is exhausted.</p>
+                    <button type="button" onClick={() => setPricing(true)} className="mt-4 w-full rounded-2xl bg-white px-4 py-3 text-sm font-black uppercase active:translate-y-0.5" style={{ color: C.ink }}>View plan</button>
+                  </div>
+                </aside>
               </div>
             )}
           </main>

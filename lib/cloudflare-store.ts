@@ -121,7 +121,14 @@ export async function incrementUploadUsage(userId: string) {
 export async function listExams(): Promise<ExamRecord[]> {
   const env = await cloudflareEnv();
   const rows = await all<ExamRecord>(env.DRKARD_DB, "select id, slug, title, role from exams order by title");
-  return rows.length ? rows : SAMPLE_EXAMS;
+  const exams = rows.length ? rows : SAMPLE_EXAMS;
+  const visible = await Promise.all(
+    exams.map(async (exam) => ({
+      exam,
+      questionCount: await questionCountForExam(env.DRKARD_QBANKS, exam.slug),
+    })),
+  );
+  return visible.filter(({ questionCount }) => questionCount >= 100).map(({ exam }) => exam);
 }
 
 export async function examBySlug(slug: string) {
@@ -141,6 +148,17 @@ export async function readQuestions(examSlug: string): Promise<BankQuestion[]> {
     return Array.isArray(payload) ? payload : payload.questions ?? [];
   }
   return sampleQuestionsForExam(exam);
+}
+
+async function questionCountForExam(bucket: R2Bucket | undefined, slug: string) {
+  const object = await bucket?.get(`qbanks/v1/${slug}/all.json`);
+  if (!object) return 0;
+
+  const metadataCount = Number(object.customMetadata?.questionCount);
+  if (Number.isFinite(metadataCount) && metadataCount >= 0) return metadataCount;
+
+  const payload = (await object.json().catch(() => null)) as { questions?: unknown[] } | unknown[] | null;
+  return Array.isArray(payload) ? payload.length : payload?.questions?.length ?? 0;
 }
 
 export async function getEntitlements(clerkUserId: string | null | undefined): Promise<Entitlements> {
